@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const num = +prompt("차량 번호 입력");
+      document.write(`차량 번호 : ${num}`);
+      document.write(`<br> 입고 ${num % 10 == 3 ? "불가능" : "가능"}`);
+    </script>
+  </body>
+</html>
