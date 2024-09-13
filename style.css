@@ -84,6 +84,11 @@ section > ul {
   padding-block: 8px;
 }
 
+li:hover {
+  border-radius: 8px;
+  background-color: #eaeaea;
+}
+
 .left {
   float: left;
   width: 30%;
