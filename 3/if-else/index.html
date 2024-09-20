@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>달을 이용한 계절 판별</h1>
+    <script>
+      const month = +prompt("월을 입력하세요");
+      const season =
+        month == 0 || month > 12
+          ? false
+          : month == 12 || month < 3
+          ? "겨울"
+          : month < 6
+          ? "봄"
+          : month < 9
+          ? "여름"
+          : "가을";
+      document.write(
+        !season
+          ? "잘못된 월을 입력하였습니다."
+          : `${month}월은 ${season}입니다.`
+      );
+    </script>
+  </body>
+</html>
