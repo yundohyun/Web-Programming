@@ -8,12 +8,31 @@
   <body>
     <h1>조건문</h1>
     <script>
-      const pay = +prompt("원하는 연봉 입력");
+      const pay = +prompt("연봉 입력") ?? 0;
+      const distance = +prompt("출퇴근 거리 입력") ?? 0;
       // let result = "";
       // if (pay >= 4000) result = "준비";
       // else result = "휴식";
-      const result = pay >= 4000 ? "준비" : "휴식";
-      document.write(`출근 여부 : ${result}`);
+      const result =
+        (pay >= 4000 && distance <= 15) || pay >= 10000
+          ? "준비"
+          : pay >= 3500 && distance <= 30
+          ? "고민중"
+          : "휴식";
+      document.write(`연봉 : ${pay}만원<br>`);
+      document.write(`출퇴근 거리 : ${distance}km<br>`);
+      document.write(`출근 여부 : ${result}<br>`);
+      document.write(
+        `${
+          distance >= 500
+            ? "비행기"
+            : distance >= 50
+            ? "자가용"
+            : distance >= 10
+            ? "지하철"
+            : "버스"
+        } 이용`
+      );
     </script>
   </body>
 </html>
