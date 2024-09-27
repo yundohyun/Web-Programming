@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Switch문</h1>
+    <script> 
+      let month = +prompt('월 입력')
+      let season = null;
+      switch(month) {
+        case 12:
+        case 1:
+        case 2:
+          season = '겨울';
+          break;
+        case 3:
+        case 4: 
+        case 5: 
+          season = '봄';
+          break;
+        case 6: 
+        case 7: 
+        case 8: 
+          season = '여름';
+          break;
+        case 9: 
+        case 10: 
+        case 11:
+          season = '가을';
+          break;
+        default: 
+          break; 
+      }
+      document.write(
+        !season
+          ? "잘못된 월을 입력하였습니다."
+          : `${month}월은 ${season}입니다.`
+      );
+    </script>
+  </body>
+</html>
+
