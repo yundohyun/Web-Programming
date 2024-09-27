@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>우물</h1>
+    <script>
+      let count = 0;
+      let distance = 0;
+      while (distance <= 100) {
+        distance += 5;
+        count++;
+        distance -= distance <= 51 ? 1 : 2;
+        // if (distance <= 51)
+        //   distance -= 1;
+        // else
+        //   distance -= 2;
+      }
+      document.write(`우물을 ${count}번째에서 탈출했습니다.`);
+    </script>
+  </body>
+</html>
