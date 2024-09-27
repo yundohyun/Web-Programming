@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>중첩삼항연산자</h1>
+    <script>
+      const c1 = true;
+      const c2 = false;
+      const c3 = true;
+      let result = c1 ? "참" : "거짓";
+      document.write(`${result}<br>`);
+      result = c1 ? (c2 ? "참참" : "참거짓") : "거짓거짓";
+      document.write(`${result}<br>`);
+      result = c1 ? "true" : c2 ? 1 : 2;
+      document.write(`${result}<br>`);
+    </script>
+  </body>
+</html>
