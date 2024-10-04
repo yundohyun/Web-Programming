@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>구구단 책받침</h1>
+    <script>
+      for (let j = 1; j < 10; j++) {
+        for (let i = 2; i < 10; i++)
+          document.write(
+            `${i} * ${j} = ${i * j}${"&nbsp;".repeat(
+              7 - (i * j).toString().length * 2
+            )}`
+          );
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>
