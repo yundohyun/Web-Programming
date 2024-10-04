@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Switch Break</h1>
+    <script>
+      let price;
+      const drink = prompt("원하는 음료를 입력하세요");
+      switch (drink) {
+        case "아메리카노":
+          price = 2500;
+          break;
+        case "카페라떼":
+          price = 3000;
+          break;
+        case "카푸치노":
+          price = 3500;
+          break;
+        case "티":
+          price = 2200;
+          break;
+        default:
+          price = 0;
+      }
+      document.write(
+        price == 0
+          ? "올바르지 않은 음료입니다."
+          : `${drink}는 ${price}원입니다.`
+      );
+    </script>
+  </body>
+</html>
