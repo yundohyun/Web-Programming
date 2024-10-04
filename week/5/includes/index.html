@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Includes</h1>
+    <script>
+      const arr = [13, 4, 45132, 65, 34, 24, 563568, 421, 56, 345, 64321, 7];
+      document.write(`arr 배열의 값 : ${JSON.stringify(arr)}<br><br>`);
+      for (const num of [1, 2, 4, 6, 8])
+        document.write(
+          `arr 배열에 ${num} 포함 여부 : ${arr.includes(num)}<br>`
+        );
+    </script>
+  </body>
+</html>
