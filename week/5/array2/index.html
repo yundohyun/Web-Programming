@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>리스트</h1>
+    <script>
+      const arr = [654, 65, 4668, 76, 54, 756, 6, 543, 75, 47, 754, 5];
+      document.write(`arr 배열의 값 : ${JSON.stringify(arr)}<br>`);
+      document.write(`arr 배열의 길이 : ${arr.length}<br><br>`);
+      arr.push(7);
+      document.write("arr 배열에 7 추가<br>");
+      document.write(`arr 배열의 값 : ${JSON.stringify(arr)}<br>`);
+      document.write(`arr 배열의 길이 : ${arr.length}<br><br>`);
+      arr.unshift(0);
+      document.write("arr 배열의 첫 번째 값에 0 추가<br>");
+      document.write(`arr 배열의 값 : ${JSON.stringify(arr)}<br>`);
+      document.write(`arr 배열의 길이 : ${arr.length}<br><br>`);
+      arr.shift();
+      document.write("arr 배열의 첫 번째 값 제거<br>");
+      document.write(`arr 배열의 값 : ${JSON.stringify(arr)}<br>`);
+      document.write(`arr 배열의 길이 : ${arr.length}<br><br>`);
+      arr.pop();
+      document.write("arr 배열의 마지막 값 제거<br>");
+      document.write(`arr 배열의 값 : ${JSON.stringify(arr)}<br>`);
+      document.write(`arr 배열의 길이 : ${arr.length}<br><br>`);
+    </script>
+  </body>
+</html>
