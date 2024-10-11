@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>2D Array</h1>
+    <script>
+      const arr = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+      for (let i = 0; i < arr.length; i++)
+        for (let j = 0; j < arr[i].length; j++)
+          document.write(`arr[${i}][${j}] : ${arr[i][j]}<br>`);
+      document.write(
+        JSON.stringify(arr, null, 4)
+          .replace(/ /g, "&nbsp;")
+          .replace(/\n/g, "<br>")
+      );
+    </script>
+  </body>
+</html>
