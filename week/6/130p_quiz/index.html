@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+    <script>
+      const arr = ["가", "라", "다", "라", "마"];
+      for (let i = 0; i < arr.length; i++)
+        document.write(`arr[${i}] : ${arr[i]}<br>`);
+      document.write(`<hr>`);
+
+      while (arr.indexOf("라") != -1) {
+        document.write(`arr.indexOf("라") : ${arr.indexOf("라")}<br>`);
+        arr.splice(arr.indexOf("라"), 1);
+      }
+
+      for (let i = 0; i < arr.length; i++)
+        document.write(`arr[${i}] : ${arr[i]}<br>`);
+    </script>
+    <hr />
+    <script>
+      const arr2 = [1, 2, 3, 4, 4, 4, 4, 6];
+      for (let i = 0; i < arr2.length; i++)
+        document.write(`arr2[${i}] : ${arr2[i]}<br>`);
+      document.write(`<hr>`);
+
+      while (arr2.lastIndexOf(4) != -1) {
+        document.write(`arr2.lastIndexOf(4) : ${arr2.lastIndexOf(4)}<br>`);
+        arr2.splice(arr2.lastIndexOf(4), 1);
+      }
+
+      for (let i = 0; i < arr2.length; i++)
+        document.write(`arr2[${i}] : ${arr2[i]}<br>`);
+    </script>
+  </body>
+</html>
