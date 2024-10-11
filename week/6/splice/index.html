@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>splice</h1>
+    <script>
+      const arr = [1, 2, 3, 4, 5];
+      arr[0] = 7;
+      for (let i = 0; i < arr.length; i++)
+        document.write(`arr[${i}] : ${arr[i]}<br>`);
+      document.write("-".repeat(30) + "<br>");
+
+      arr.splice(3, 1, 77, 88, 99);
+      for (let i = 0; i < arr.length; i++)
+        document.write(`arr[${i}] : ${arr[i]}<br>`);
+    </script>
+  </body>
+</html>
