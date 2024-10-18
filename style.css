@@ -84,6 +84,18 @@ section > ul {
   padding-block: 8px;
 }
 
+section > ul > * {
+  word-break: keep-all;
+}
+
+section > ul > h3 {
+  font-size: 16px;
+}
+
+section > ul > li {
+  font-size: 14px;
+}
+
 li:hover {
   border-radius: 8px;
   background-color: #eaeaea;
@@ -91,13 +103,12 @@ li:hover {
 
 .left {
   float: left;
-  width: 30%;
-  border-radius: 16px 0 0 16px;
+  width: 20%;
 }
 
 .right {
   float: right;
-  width: 70%;
+  width: 60%;
   border-radius: 0 16px 16px 0;
 }
 
