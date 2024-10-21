@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>ES6 Function</h1>
+    <script>
+      add1 = function () {
+        document.write("메롱");
+      };
+
+      add2 = function () {
+        return "<br>밥먹자";
+      };
+
+      add3 = function (msg) {
+        document.write("<br> 전달받은 메시지 " + msg);
+      };
+      add3("스케이트 타러가자");
+      add3("미팅 가자");
+      add3("우주여행 가자");
+
+      add4 = function (a, b) {
+        let res = a + b;
+        return res;
+      };
+
+      add1();
+      document.write(add2());
+    </script>
+  </body>
+</html>
