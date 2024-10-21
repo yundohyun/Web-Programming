@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array 복습 2</h1>
+    <script>
+      const arr = ["a", 4, 2, "b", 3, 8, 7];
+      document.write(JSON.stringify(arr) + "<br>".repeat(2));
+
+      document.write("arr.slice(3, 6) : " + arr.slice(3, 6));
+      document.write(
+        "arr.concat('노회정', '동양미래대') : " +
+          arr.concat("노회정", "동양미래대")
+      );
+      document.write("arr.join('#') : " + arr.join("#"));
+      document.write("arr.join([7, 8]) : " + arr.join([7, 8]));
+    </script>
+  </body>
+</html>
