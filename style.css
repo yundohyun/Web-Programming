@@ -124,3 +124,42 @@ footer {
   clear: both;
   text-align: center;
 }
+
+@media screen and (min-width: 900px) {
+  .left {
+    float: left;
+    width: 18%;
+  }
+
+  .right {
+    float: right;
+    width: 64%;
+    border-radius: 0 16px 16px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .left {
+    float: left;
+    width: 15%;
+  }
+
+  .right {
+    float: right;
+    width: 70%;
+    border-radius: 0 16px 16px 0;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .left {
+    float: left;
+    width: 12%;
+  }
+
+  .right {
+    float: right;
+    width: 76%;
+    border-radius: 0 16px 16px 0;
+  }
+}
