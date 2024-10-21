@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array 복습 1</h1>
+    <script>
+      const arr = [1, 2, 3, 4, 5];
+      document.write(JSON.stringify(arr) + "<br>".repeat(2));
+
+      arr.unshift(0);
+      document.write(
+        "arr.unshift(0) : " + JSON.stringify(arr) + "<br>".repeat(2)
+      );
+
+      arr.push(8);
+      document.write("arr.push(8) : " + JSON.stringify(arr) + "<br>".repeat(2));
+
+      arr.pop();
+      document.write("arr.pop() : " + JSON.stringify(arr) + "<br>".repeat(2));
+
+      arr.shift();
+      document.write("arr.shift() : " + JSON.stringify(arr) + "<br>".repeat(2));
+
+      arr.splice(1, 2, "a", "h");
+      document.write(
+        'arr.splice(1, 2, "a", "h") : ' + JSON.stringify(arr) + "<br>".repeat(2)
+      );
+
+      arr.splice(2, 0, "가");
+      document.write(
+        'arr.splice(2, 0, "가") : ' + JSON.stringify(arr) + "<br>".repeat(2)
+      );
+
+      document.write("<hr>");
+
+      document.write('arr.includes("h") : ' + arr.includes("h") + "<br>");
+      document.write('arr.includes("z") : ' + arr.includes("z") + "<br>");
+      document.write('arr.indexOf("가") : ' + arr.indexOf("가") + "<br>");
+      document.write("arr[arr.length - 1] : " + arr[arr.length - 1]);
+      document.write("arr.at(4) : " + arr.at(4) + "<br>");
+      document.write("arr.at(-1) : " + arr.at(-1) + "<br>");
+      document.write("arr.at(3) : " + arr.at(3) + "<br>");
+
+      document.write(JSON.stringify(arr));
+    </script>
+  </body>
+</html>
