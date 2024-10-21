@@ -11,13 +11,14 @@
       const arr = ["a", 4, 2, "b", 3, 8, 7];
       document.write(JSON.stringify(arr) + "<br>".repeat(2));
 
-      document.write("arr.slice(3, 6) : " + arr.slice(3, 6));
+      document.write("arr.slice(3, 6) : " + arr.slice(3, 6) + "<br>");
       document.write(
         "arr.concat('노회정', '동양미래대') : " +
-          arr.concat("노회정", "동양미래대")
+          arr.concat("노회정", "동양미래대") +
+          "<br>"
       );
-      document.write("arr.join('#') : " + arr.join("#"));
-      document.write("arr.join([7, 8]) : " + arr.join([7, 8]));
+      document.write("arr.join('#') : " + arr.join("#") + "<br>");
+      document.write("arr.join([7, 8]) : " + arr.join([7, 8]) + "<br>");
     </script>
   </body>
 </html>

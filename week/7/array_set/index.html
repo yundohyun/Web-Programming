@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array & Set</h1>
+    <script>
+      // let a = [];
+      // a[0] = 1;
+      // a[1] = "korea";
+      // a[2] = "water";
+      // document.write("<br>1. a = []: ");
+      // for (let i = 0; i < a.length; i++) {
+      //   document.write("<br>" + a[i] + " ");
+      // }
+
+      // //Array():
+      // let arr = Array(5);
+      // arr.fill("love");
+      // document.write("<br>2. arr = Array(5) : ");
+      // for (let i = 0; i < arr.length; i++) {
+      //   document.write("<br>" + arr[i] + " ");
+      // }
+
+      // //3.Set()-ade bende salah, nnt betulkn balik-
+      // let arrset = new Set([1, 1, 2, 2, 3, 3]);
+      // document.write("<br>3. arrset = new Set([1,1,2,2,3,3] : ");
+      // document.write("<br>" + arrset.size());
+
+      const a = [1, "korea", "water"];
+      document.write("a : " + JSON.stringify(a) + "<br>".repeat(2));
+
+      const arr = Array(5).fill("love");
+      document.write("arr : " + JSON.stringify(arr) + "<br>".repeat(2));
+
+      const arrset = new Set([1, 1, 2, 2, 3, 3]);
+      document.write("arrset : " + JSON.stringify([...arrset]) + "<br>".repeat(2));
+    </script>
+  </body>
+</html>
