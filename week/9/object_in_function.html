@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object 안에 Function</h1>
+    <script>
+      const debug = {
+        a: "윤도현",
+        log: (...v) => document.write(`전달 받은 값 : ${v.join(", ")}<br />`),
+        add: (...v) => v.reduce((a, b) => a + b),
+        subtract: (...v) => v[0] - v.slice(1).reduce((a, b) => a + b),
+        multiple: (...v) => v.reduce((a, b) => a * b),
+        divide: (...v) => v[0] / v.slice(1).reduce((a, b) => a * b),
+      };
+      debug.log("으악", "JavaScript는", "최고야");
+      debug.log(debug.add(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+      debug.log(debug.subtract(56, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+      debug.log(debug.multiple(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+      debug.log(debug.divide(36288000, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+    </script>
+  </body>
+</html>
