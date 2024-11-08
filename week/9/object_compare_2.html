@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object 비교2</h1>
+    <script>
+      const a = { name: "lee" };
+      const data = {
+        name: { first: "lee", last: "malja" },
+        gender: "man",
+        print: () => {
+          document.write("data.print() 호출<br>");
+        },
+      };
+      document.write(`a.name : ${a.name}<br>`);
+      document.write(`data.name.first : ${data.name.first}<br>`);
+      document.write(`data.name.last : ${data.name.last}<br>`);
+      document.write(`a["name"] : ${a["name"]}<br>`);
+      document.write(`data["name"]["first"] : ${data["name"]["first"]}<br>`);
+      document.write(`data["name"]["last"] : ${data["name"]["last"]}<br>`);
+      data.print();
+    </script>
+  </body>
+</html>
