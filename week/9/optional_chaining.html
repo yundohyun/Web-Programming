@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Optional Chaining</h1>
+    <script>
+      const me = {
+        name: "윤도현",
+        gender: "남자",
+        age: 20,
+        friend: {
+          best: ["세경", "영민", "산하"],
+          worst: ["유진", "민준", "경민"],
+        },
+        notebook: "MacBook Air M1 16GB",
+        server: "7530U 32GB",
+      };
+      delete me?.friend;
+      document.write(`me?.name : ${me?.name}<br>`);
+      document.write(`me?.gender : ${me?.gender}<br>`);
+      document.write(`me?.friend?.girl : ${me?.friend?.girl}<br>`);
+      document.write(`me?.friend?.best : ${me?.friend?.best}<br>`);
+      document.write(`me?.friend?.worst : ${me?.friend?.worst}<br>`);
+      document.write(`me?.house : ${me?.house}<br>`);
+      document.write(`me?.desktop : ${me?.desktop}<br>`);
+      document.write(`me?.notebook : ${me?.notebook}<br>`);
+      document.write(`me?.server : ${me?.server}<br>`);
+    </script>
+  </body>
+</html>
