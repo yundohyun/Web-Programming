@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <script>
+      const a = 4;
+      let b = 5;
+      c = 7;
+
+      const arr = [];
+      arr[0] = 1;
+      arr[1] = 2;
+
+      const arr1 = [1, 2, 3, 4, 5, "a", 3.14];
+      for (let i = 0; i < arr1.length; i++) document.write(arr1[i] + " ");
+      document.write("<br>");
+
+      const obj = {}; // Empty Object
+      const obj1 = {
+        nation: "Korea",
+        age: 20,
+        address: "Seoul",
+        phone: "010-1234-5678",
+      };
+      obj1.name = "윤도현";
+      obj1["name"] = "현도윤";
+      for (const [k, v] of Object.entries(obj1))
+        document.write(`obj1.${k} = ${v}<br>`);
+    </script>
+  </body>
+</html>
