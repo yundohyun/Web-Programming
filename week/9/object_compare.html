@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object 비교</h1>
+    <script>
+      const a = { name: "jung" };
+      const b = a;
+      const c = { name: "jung" };
+      document.write(`a == b : ${a == b}<br />`);
+      document.write(`a == c : ${a == c}<br />`);
+      const d = [1, 2, a];
+      document.write(`a == d[2] : ${a == d[2]}<br />`);
+    </script>
+  </body>
+</html>
