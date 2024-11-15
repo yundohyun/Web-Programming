@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>구조분해할당</h1>
+    <pre>
+      <code class="language-javascript">
+    const arr = [1, 2, 3];
+    // const one = arr[0];
+    // const two = arr[1];
+    // const three = arr[2];
+    const [one, two, three] = arr;
+    document.write(`one = ${one}&lt;br&gt;`);
+    document.write(`two = ${two}&lt;br&gt;`);
+    document.write(`three = ${three}&lt;br&gt;`);
+
+    const person = { name: "윤도현", age: 20, address: "양천구" };
+    const { name, age, address } = person;
+    // const name = person.name;
+    // const age = person.age;
+    // const address = person.address;
+    document.write(`name = ${name}&lt;br&gt;`);
+    document.write(`age = ${age}&lt;br&gt;`);
+    document.write(`address = ${address}&lt;br&gt;`);
+
+    let a = "apple",
+      b = "banana";
+    document.write(`a = ${a}&lt;br&gt;`);
+    document.write(`b = ${b}&lt;br&gt;`);
+    // let temp = a;
+    // a = b;
+    // b = temp;
+    [a, b] = [b, a];
+    document.write(`a = ${a}&lt;br&gt;`);
+    document.write(`b = ${b}&lt;br&gt;`);
+      </code>
+    </pre>
+    <script>
+      hljs.highlightAll();
+      const arr = [1, 2, 3];
+      // const one = arr[0];
+      // const two = arr[1];
+      // const three = arr[2];
+      const [one, two, three] = arr;
+      document.write(`one = ${one}<br>`);
+      document.write(`two = ${two}<br>`);
+      document.write(`three = ${three}<br>`);
+
+      const person = { name: "윤도현", age: 20, address: "양천구" };
+      // const name = person.name;
+      // const age = person.age;
+      // const address = person.address;
+      const { name, age, address } = person;
+      document.write(`name = ${name}<br>`);
+      document.write(`age = ${age}<br>`);
+      document.write(`address = ${address}<br>`);
+
+      let a = "apple",
+        b = "banana";
+      document.write(`a = ${a}<br>`);
+      document.write(`b = ${b}<br>`);
+      // let temp = a;
+      // a = b;
+      // b = temp;
+      [a, b] = [b, a];
+      document.write(`a = ${a}<br>`);
+      document.write(`b = ${b}<br>`);
+    </script>
+  </body>
+</html>
