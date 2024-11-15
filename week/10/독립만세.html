@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>독립만세</h1>
+    <pre>
+      <code class="language-javascript">
+    const a = { name: "강아지" };
+    const soft = a;
+    const deep = JSON.parse(JSON.stringify(a));
+    document.write(`a.name = ${a.name}&lt;br&gt;`);
+    document.write(`soft.name = ${soft.name}&lt;br&gt;`);
+    document.write(`deep.name = ${deep.name}&lt;br&gt;`);
+    deep.name = "고양이";
+    document.write(`a.name = ${a.name}&lt;br&gt;`);
+    document.write(`soft.name = ${soft.name}&lt;br&gt;`);
+    document.write(`deep.name = ${deep.name}&lt;br&gt;`);
+    soft.name = "토끼";
+    document.write(`a.name = ${a.name}&lt;br&gt;`);
+    document.write(`soft.name = ${soft.name}&lt;br&gt;`);
+    document.write(`deep.name = ${deep.name}&lt;br&gt;`);
+    document.write(`a === soft = ${a === soft}&lt;br&gt;`);
+    document.write(`a === deep = ${a === deep}&lt;br&gt;`);
+      </code>
+    </pre>
+    <script>
+      hljs.highlightAll();
+      const a = { name: "강아지" };
+      const soft = a;
+      const deep = JSON.parse(JSON.stringify(a));
+      document.write(`a.name = ${a.name}<br>`);
+      document.write(`soft.name = ${soft.name}<br>`);
+      document.write(`deep.name = ${deep.name}<br>`);
+      deep.name = "고양이";
+      document.write(`a.name = ${a.name}<br>`);
+      document.write(`soft.name = ${soft.name}<br>`);
+      document.write(`deep.name = ${deep.name}<br>`);
+      soft.name = "토끼";
+      document.write(`a.name = ${a.name}<br>`);
+      document.write(`soft.name = ${soft.name}<br>`);
+      document.write(`deep.name = ${deep.name}<br>`);
+      document.write(`a === soft = ${a === soft}<br>`);
+      document.write(`a === deep = ${a === deep}<br>`);
+    </script>
+  </body>
+</html>
