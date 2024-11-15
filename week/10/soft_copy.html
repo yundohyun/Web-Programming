@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Soft Copy</h1>
+    <pre>
+      <code class="language-javascript">
+    const array = [{ j: "k", l: "m" }];
+    const refer1 = array; // 참조 관계
+    const refer2 = [...array]; // 얕은 복사
+    document.write(`array[0].j = ${array[0].j}&lt;br&gt;`);
+    document.write(`refer1[0].j = ${refer1[0].j}&lt;br&gt;`);
+    document.write(`refer2[0].j = ${refer2[0].j}&lt;br&gt;`);
+    array[0].j = "n";
+    document.write(`array[0].j = ${array[0].j}&lt;br&gt;`);
+    document.write(`refer1[0].j = ${refer1[0].j}&lt;br&gt;`);
+    document.write(`refer2[0].j = ${refer2[0].j}&lt;br&gt;`);
+    refer2[0].j = "o";
+    document.write(`array[0].j = ${array[0].j}&lt;br&gt;`);
+    document.write(`refer1[0].j = ${refer1[0].j}&lt;br&gt;`);
+    document.write(`refer2[0].j = ${refer2[0].j}&lt;br&gt;`);
+    document.write(`array[0].j === refer2[0].j = ${array[0].j === refer2[0].j}&lt;br&gt;`);
+      </code>
+    </pre>
+    <script>
+      hljs.highlightAll();
+      const array = [{ j: "k", l: "m" }];
+      const refer1 = array; // 참조 관계
+      const refer2 = [...array]; // 얕은 복사
+      document.write(`array[0].j = ${array[0].j}<br>`);
+      document.write(`refer1[0].j = ${refer1[0].j}<br>`);
+      document.write(`refer2[0].j = ${refer2[0].j}<br>`);
+      array[0].j = "n";
+      document.write(`array[0].j = ${array[0].j}<br>`);
+      document.write(`refer1[0].j = ${refer1[0].j}<br>`);
+      document.write(`refer2[0].j = ${refer2[0].j}<br>`);
+      refer2[0].j = "o";
+      document.write(`array[0].j = ${array[0].j}<br>`);
+      document.write(`refer1[0].j = ${refer1[0].j}<br>`);
+      document.write(`refer2[0].j = ${refer2[0].j}<br>`);
+      document.write(
+        `array[0].j === refer2[0].j = ${array[0].j === refer2[0].j}<br>`
+      );
+    </script>
+  </body>
+</html>
