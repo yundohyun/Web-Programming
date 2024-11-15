@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object Reference</h1>
+    <script>
+      const a = { name: "홍길동" };
+      let b = a;
+      document.write(`a.name = ${a.name}<br>`);
+      document.write(`b.name = ${b.name}<br>`);
+      b.name = "이순신";
+      document.write(`a.name = ${a.name}<br>`);
+      document.write(`b.name = ${b.name}<br>`);
+    </script>
+  </body>
+</html>
