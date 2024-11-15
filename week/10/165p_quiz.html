@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>165p Quiz</h1>
+    <pre>
+      <code class="language-javascript">
+    const a = "b";
+    const c = ["d", true, 1];
+    const e = { g: "h" };
+    const i = [{ j: "k" }, { 1: "m" }];
+    const n = { o: { p: "q" } };
+    const copy_c = JSON.parse(JSON.stringify(c));
+    const copy_e = JSON.parse(JSON.stringify(e));
+    const copy_i = JSON.parse(JSON.stringify(i));
+    const copy_n = JSON.parse(JSON.stringify(n));
+    document.write(`c === copy_c = ${c === copy_c}&lt;br&gt;`);
+    document.write(`e === copy_e = ${e === copy_e}&lt;br&gt;`);
+    document.write(`i === copy_i = ${i === copy_i}&lt;br&gt;`);
+    document.write(`n === copy_n = ${n === copy_n}&lt;br&gt;`);
+      </code>
+    </pre>
+    <script>
+      hljs.highlightAll();
+      const a = "b";
+      const c = ["d", true, 1];
+      const e = { g: "h" };
+      const i = [{ j: "k" }, { 1: "m" }];
+      const n = { o: { p: "q" } };
+      const copy_c = JSON.parse(JSON.stringify(c));
+      const copy_e = JSON.parse(JSON.stringify(e));
+      const copy_i = JSON.parse(JSON.stringify(i));
+      const copy_n = JSON.parse(JSON.stringify(n));
+      document.write(`c === copy_c = ${c === copy_c}<br>`);
+      document.write(`e === copy_e = ${e === copy_e}<br>`);
+      document.write(`i === copy_i = ${i === copy_i}<br>`);
+      document.write(`n === copy_n = ${n === copy_n}<br>`);
+    </script>
+  </body>
+</html>
