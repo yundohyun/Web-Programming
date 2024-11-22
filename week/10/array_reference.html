@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
     <link
       rel="stylesheet"
@@ -13,6 +19,17 @@
   </head>
   <body>
     <h1>Array Reference</h1>
+    <pre>
+      <code class="language-javascript">
+    const array = [{ j: "k", l: "m" }];
+    const refer = array;
+    array[0].j = "s";
+    refer[0].j = "t";
+    document.write(`array[0].j = ${array[0].j}&lt;br&gt;`);
+    document.write(`refer[0].j = ${refer[0].j}&lt;br&gt;`);
+    document.write(`array[0] === refer[0] = ${array[0] === refer[0]}&lt;br&gt;`);
+      </code>
+    </pre>
     <script>
       hljs.highlightAll();
       const array = [{ j: "k", l: "m" }];

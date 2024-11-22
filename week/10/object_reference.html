@@ -3,11 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>Object Reference</h1>
+    <pre>
+      <code class="language-javascript">
+    const a = { name: "홍길동" };
+    let b = a;
+    document.write(`a.name = ${a.name}&lt;br&gt;`);
+    document.write(`b.name = ${b.name}&lt;br&gt;`);
+    b.name = "이순신";
+    document.write(`a.name = ${a.name}&lt;br&gt;`);
+    document.write(`b.name = ${b.name}&lt;br&gt;`);
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const a = { name: "홍길동" };
       let b = a;
       document.write(`a.name = ${a.name}<br>`);

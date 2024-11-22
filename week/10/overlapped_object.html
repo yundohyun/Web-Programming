@@ -3,11 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>중첩된 Object</h1>
+    <pre>
+      <code class="language-javascript">
+    const data = {
+      name: { first: "윤", last: "도현" },
+      gender: "male",
+    };
+    document.write(`data.name.first = ${data.name.first}&lt;br&gt;`);
+    document.write(`data.name.last = ${data.name.last}&lt;br&gt;`);
+    document.write(`data.gender = ${data.gender}&lt;br&gt;`);
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const data = {
         name: { first: "윤", last: "도현" },
         gender: "male",
