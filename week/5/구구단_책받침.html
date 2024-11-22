@@ -3,11 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>구구단 책받침</h1>
+    <pre>
+      <code class="language-javascript">
+    for (let j &#x3D; 1; j &lt; 10; j++) {
+      for (let i &#x3D; 2; i &lt; 10; i++)
+        document.write(
+          &#x60;${i} * ${j} &#x3D; ${i * j}${&quot;&amp;nbsp;&quot;.repeat(
+            7 - (i * j).toString().length * 2
+          )}&#x60;
+        );
+      document.write(&quot;&lt;br&gt;&quot;);
+    }
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       for (let j = 1; j < 10; j++) {
         for (let i = 2; i < 10; i++)
           document.write(

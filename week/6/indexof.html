@@ -3,11 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>indexOf</h1>
+    <pre>
+      <code class="language-javascript">
+    const arr = [1, 2, 3, 4, 5];
+    for (let i = 0; i < arr.length; i++)
+      document.write(`arr[${i}] : ${arr[i]}&lt;br&gt;`);
+    document.write(arr.indexOf(4));
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const arr = [1, 2, 3, 4, 5];
       for (let i = 0; i < arr.length; i++)
         document.write(`arr[${i}] : ${arr[i]}<br>`);

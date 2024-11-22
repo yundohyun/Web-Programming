@@ -3,10 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>Array</h1>
+    <pre>
+      <code class="language-html">
+    &lt;script&gt;
+      hljs.highlightAll();
+      let arr &#x3D; [3, &quot;n&quot;, 7, 4];
+      for (let i &#x3D; 0; i &lt; arr.length; i++)
+        document.write(&#x60;arr[${i}] &#x3D; ${arr[i]}&lt;br&gt;&#x60;);
+    &lt;&#x2F;script&gt;
+    &lt;hr &#x2F;&gt;
+    &lt;script&gt;
+      let arr2 &#x3D; [[2, 3, 4, 6], undefined, [1, 2], 3];
+      for (let i &#x3D; 0; i &lt; arr2.length; i++)
+        document.write(&#x60;arr2[${i}] &#x3D; ${arr2[i]}&lt;br&gt;&#x60;);
+    &lt;&#x2F;script&gt;
+      </code>
+    </pre>
+    <script>
+      hljs.highlightAll();
+    </script>
     <script>
       let arr = [3, "n", 7, 4];
       for (let i = 0; i < arr.length; i++)

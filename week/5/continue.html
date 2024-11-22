@@ -3,11 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>Continue 홀수 출력</h1>
+    <pre>
+      <code class="language-javascript">
+    for (let i &#x3D; 1; i &lt;&#x3D; 10; i++) {
+      if (i % 2 &#x3D;&#x3D; 0) continue;
+      document.write(&#x60;${i}&lt;br&gt;&#x60;);
+    }
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       for (let i = 1; i <= 10; i++) {
         if (i % 2 == 0) continue;
         document.write(`${i}<br>`);

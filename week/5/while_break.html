@@ -3,11 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>While Break</h1>
+    <pre>
+      <code class="language-javascript">
+    let text;
+    while (text !&#x3D; &quot;q&quot;) {
+      text &#x3D; prompt(&quot;텍스트 입력&quot;);
+      document.write(text + &quot;&lt;br&gt;&quot;);
+    }
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       let text;
       while (text != "q") {
         text = prompt("텍스트 입력");

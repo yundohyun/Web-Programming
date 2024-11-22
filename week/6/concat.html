@@ -3,11 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>concat</h1>
+    <pre>
+      <code class="language-javascript">
+    const arr1 = [1, 2, 3];
+    const arr2 = ["가", "나", "다", "라"];
+    const arr3 = arr1.concat(arr2, "wa!", 1, 2, 3, 4);
+    document.write(`arr1 : ${JSON.stringify(arr1)}&lt;br&gt;`);
+    document.write(`arr2 : ${JSON.stringify(arr2)}&lt;br&gt;`);
+    document.write(`arr3 : ${JSON.stringify(arr3)}&lt;br&gt;`);
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const arr1 = [1, 2, 3];
       const arr2 = ["가", "나", "다", "라"];
       const arr3 = arr1.concat(arr2, "wa!", 1, 2, 3, 4);

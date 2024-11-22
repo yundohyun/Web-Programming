@@ -3,11 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>리스트</h1>
+    <pre>
+      <code class="language-javascript">
+    const arr &#x3D; [654, 65, 4668, 76, 54, 756, 6, 543, 75, 47, 754, 5];
+    document.write(&#x60;arr 배열의 값 : ${JSON.stringify(arr)}&lt;br&gt;&#x60;);
+    document.write(&#x60;arr 배열의 길이 : ${arr.length}&lt;br&gt;&lt;br&gt;&#x60;);
+    arr.push(7);
+    document.write(&quot;arr 배열에 7 추가&lt;br&gt;&quot;);
+    document.write(&#x60;arr 배열의 값 : ${JSON.stringify(arr)}&lt;br&gt;&#x60;);
+    document.write(&#x60;arr 배열의 길이 : ${arr.length}&lt;br&gt;&lt;br&gt;&#x60;);
+    arr.unshift(0);
+    document.write(&quot;arr 배열의 첫 번째 값에 0 추가&lt;br&gt;&quot;);
+    document.write(&#x60;arr 배열의 값 : ${JSON.stringify(arr)}&lt;br&gt;&#x60;);
+    document.write(&#x60;arr 배열의 길이 : ${arr.length}&lt;br&gt;&lt;br&gt;&#x60;);
+    arr.shift();
+    document.write(&quot;arr 배열의 첫 번째 값 제거&lt;br&gt;&quot;);
+    document.write(&#x60;arr 배열의 값 : ${JSON.stringify(arr)}&lt;br&gt;&#x60;);
+    document.write(&#x60;arr 배열의 길이 : ${arr.length}&lt;br&gt;&lt;br&gt;&#x60;);
+    arr.pop();
+    document.write(&quot;arr 배열의 마지막 값 제거&lt;br&gt;&quot;);
+    document.write(&#x60;arr 배열의 값 : ${JSON.stringify(arr)}&lt;br&gt;&#x60;);
+    document.write(&#x60;arr 배열의 길이 : ${arr.length}&lt;br&gt;&lt;br&gt;&#x60;);
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const arr = [654, 65, 4668, 76, 54, 756, 6, 543, 75, 47, 754, 5];
       document.write(`arr 배열의 값 : ${JSON.stringify(arr)}<br>`);
       document.write(`arr 배열의 길이 : ${arr.length}<br><br>`);
