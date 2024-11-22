@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Class</h1>
+    <pre>
+      <code class="language-javascript">
+    class Company {
+      constructor(name, distance, pay) {
+        this.name &#x3D; name;
+        this.distance &#x3D; distance;
+        this.pay &#x3D; pay;
+      }
+    }
+    const tesla &#x3D; new Company(&quot;Tesla&quot;, 100, 1000);
+    const samsung &#x3D; new Company(&quot;Samsung&quot;, 200, 2000);
+    document.write(
+      &#x60;name : ${tesla.name}, distance : ${tesla.distance}, pay : ${tesla.pay}&lt;br&gt;&#x60;
+    );
+    document.write(
+      &#x60;name : ${samsung.name}, distance : ${samsung.distance}, pay : ${samsung.pay}&lt;br&gt;&#x60;
+    );
+  
+    document.write(&quot;&lt;hr&gt;&quot;);
+  
+    class Student extends Company {
+      constructor(name, pay) {
+        super(name, 0, pay);
+      }
+      attack() {}
+    }
+    const s1 &#x3D; new Student(&quot;John&quot;);
+    const s2 &#x3D; new Student();
+    const s3 &#x3D; new Student(&quot;doe&quot;, 1000);
+    document.write(&#x60;name : ${s1.name}, pay : ${s1.pay}&lt;br&gt;&#x60;);
+    document.write(&#x60;name : ${s2.name}, pay : ${s2.pay}&lt;br&gt;&#x60;);
+    document.write(&#x60;name : ${s3.name}, pay : ${s3.pay}&lt;br&gt;&#x60;);
+    s3.attack();
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+      class Company {
+        constructor(name, distance, pay) {
+          this.name = name;
+          this.distance = distance;
+          this.pay = pay;
+        }
+      }
+      const tesla = new Company("Tesla", 100, 1000);
+      const samsung = new Company("Samsung", 200, 2000);
+      document.write(
+        `name : ${tesla.name}, distance : ${tesla.distance}, pay : ${tesla.pay}<br>`
+      );
+      document.write(
+        `name : ${samsung.name}, distance : ${samsung.distance}, pay : ${samsung.pay}<br>`
+      );
+
+      document.write("<hr>");
+
+      class Student extends Company {
+        constructor(name, pay) {
+          super(name, 0, pay);
+        }
+        attack() {}
+      }
+      const s1 = new Student("John");
+      const s2 = new Student();
+      const s3 = new Student("doe", 1000);
+      document.write(`name : ${s1.name}, pay : ${s1.pay}<br>`);
+      document.write(`name : ${s2.name}, pay : ${s2.pay}<br>`);
+      document.write(`name : ${s3.name}, pay : ${s3.pay}<br>`);
+      s3.attack();
+    </script>
+  </body>
+</html>
