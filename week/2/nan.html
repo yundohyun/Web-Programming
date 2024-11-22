@@ -4,10 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
   </head>
   <body>
     <h1>NaN</h1>
+    <pre>
+      <code class="language-html">
+    &lt;script&gt;
+      let input = prompt("문자를 입력해주세요");
+      document.write(`input : ${input}`);
+      document.write(`&lt;br&gt;input type : ${typeof input}`);
+      document.write(`&lt;br&gt;input number : ${+input}`);
+      document.write(`&lt;br&gt;input number type : ${typeof +input}`);
+    &lt;&#x2F;script&gt;
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       let input = prompt("문자를 입력해주세요");
       document.write(`input : ${input}`);
       document.write(`<br>input type : ${typeof input}`);

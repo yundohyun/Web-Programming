@@ -4,9 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
   </head>
   <body>
+    <pre>
+      <code class="language-javascript">
+    const num = +prompt("차량 번호 입력");
+    document.write(`차량 번호 : ${num}`);
+    document.write(`&lt;br&gt; 입고 ${num % 10 == 3 ? "불가능" : "가능"}`);
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const num = +prompt("차량 번호 입력");
       document.write(`차량 번호 : ${num}`);
       document.write(`<br> 입고 ${num % 10 == 3 ? "불가능" : "가능"}`);

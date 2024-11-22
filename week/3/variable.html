@@ -3,11 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>변수</h1>
+    <pre>
+      <code class="language-javascript">
+    name_school &#x3D; &quot;name_school&quot;;
+    document.write(&#x60;${name_school}&lt;br&gt;&#x60;);
+  
+    let change &#x3D; &quot;바꿔보시던가ㅋ&quot;;
+    change &#x3D; &quot;바꿈 ㅅㄱ&quot;;
+    document.write(&#x60;${change}&lt;br&gt;&#x60;);
+  
+    const change_ &#x3D; &quot;바꿔보시던가ㅋ&quot;;
+    &#x2F;&#x2F; change_ &#x3D; &quot;바꿈 ㅅㄱ&quot;; &#x2F;&#x2F; error
+    document.write(&#x60;${change_}&lt;br&gt;&#x60;);
+  
+    var change__ &#x3D; &quot;바꿔보시던가ㅋ&quot;;
+    change__ &#x3D; &quot;바꿈 ㅅㄱ&quot;;
+    var change__ &#x3D; &quot;var 이딴거 쓰지 마세요&quot;;
+    document.write(&#x60;${change__}&lt;br&gt;&#x60;);
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       name_school = "name_school";
       document.write(`${name_school}<br>`);
 

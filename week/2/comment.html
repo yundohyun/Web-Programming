@@ -4,8 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
   </head>
   <body>
+    <pre>
+      <code class="language-html">
+    &lt;ol&gt;
+      &lt;li&gt;모든 명령문의 끝에 세미콜론 지정&lt;&#x2F;li&gt;
+      &lt;li&gt;주석은 우리만 읽어보는 의미 &#x2F;&#x2F;&lt;&#x2F;li&gt;
+      &lt;li&gt;여러 문자열을 주석 처리시 &#x2F;* *&#x2F;&lt;&#x2F;li&gt;
+      &lt;li&gt;들여쓰기를 해야 가독성이 좋아짐&lt;&#x2F;li&gt;
+      &lt;li&gt;&quot;반가워요 \&#39;YC\&#39;&quot;&lt;&#x2F;li&gt;
+      &lt;li&gt;
+        &lt;script&gt;
+          document.write(&quot;반가워요 &#39;YC&#39;&quot;);
+        &lt;&#x2F;script&gt;
+      &lt;&#x2F;li&gt;
+      &lt;li&gt;
+        &lt;script&gt;
+          &#x2F;&#x2F; alert(
+          &#x2F;&#x2F;   &#x60;1번째 줄
+          &#x2F;&#x2F;   2번째 줄
+          &#x2F;&#x2F;   3번째 줄&#x60;
+          &#x2F;&#x2F;     .split(&quot;\n&quot;)
+          &#x2F;&#x2F;     .map((v) &#x3D;&gt; v.trim())
+          &#x2F;&#x2F;     .join(&quot;\n&quot;)
+          &#x2F;&#x2F; );
+          document.write(&quot;TypeScript 학교에서 가르쳤으면...&quot;);
+        &lt;&#x2F;script&gt;
+      &lt;&#x2F;li&gt;
+      &lt;li&gt;&#39;\n&#39; or &#x60;&#x60;로 줄바꿈을 하십시오&lt;&#x2F;li&gt;
+      &lt;li&gt;
+        prompt() 함수를 이용하여 문자열 입력을 받을 수 있습니다.
+        &lt;br &#x2F;&gt;
+        &lt;script&gt;
+          const value &#x3D; prompt(&quot;이름을 입력하세요&quot;);
+          document.write(&#x60;안녕하세요, ${value}님!&#x60;);
+        &lt;&#x2F;script&gt;
+      &lt;&#x2F;li&gt;
+      &lt;li&gt;
+        &lt;script&gt;
+          const age &#x3D; prompt(&quot;나이를 입력하세요&quot;);
+          document.write(&#x60;당신의 나이는 ${age}세 입니다.&#x60;);
+          document.write(&#x60;&lt;br&gt;age 타입 : ${typeof age}&#x60;);
+          document.write(&#x60;&lt;br&gt;${age &gt; 19 ? &quot;성인&quot; : &quot;미성년자&quot;}&#x60;);
+        &lt;&#x2F;script&gt;
+      &lt;&#x2F;li&gt;
+      &lt;li&gt;
+        지수 표현하기
+        &lt;br &#x2F;&gt;
+        &lt;script&gt;
+          document.write(&quot;5e4 &#x3D; 5*10^4&quot;);
+        &lt;&#x2F;script&gt;
+      &lt;&#x2F;li&gt;
+    &lt;&#x2F;ol&gt;
+      </code>
+    </pre>
+    <script>
+      hljs.highlightAll();
+    </script>
     <ol>
       <li>모든 명령문의 끝에 세미콜론 지정</li>
       <li>주석은 우리만 읽어보는 의미 //</li>

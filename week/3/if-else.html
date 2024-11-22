@@ -4,10 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
   </head>
   <body>
     <h1>달을 이용한 계절 판별</h1>
+    <pre>
+      <code class="language-javascript">
+    const month = +prompt("월을 입력하세요");
+    const season =
+      month == 0 || month > 12
+        ? false
+        : month == 12 || month < 3
+        ? "겨울"
+        : month < 6
+        ? "봄"
+        : month < 9
+        ? "여름"
+        : "가을";
+    document.write(
+      !season
+        ? "잘못된 월을 입력하였습니다."
+        : `${month}월은 ${season}입니다.`
+    );
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const month = +prompt("월을 입력하세요");
       const season =
         month == 0 || month > 12

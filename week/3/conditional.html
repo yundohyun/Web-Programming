@@ -4,10 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
   </head>
   <body>
     <h1>조건문</h1>
+    <pre>
+      <code class="language-javascript">
+    const pay = +prompt("연봉 입력") ?? 0;
+    const distance = +prompt("출퇴근 거리 입력") ?? 0;
+    // let result = "";
+    // if (pay >= 4000) result = "준비";
+    // else result = "휴식";
+    const result =
+      (pay >= 4000 && distance <= 15) || pay >= 10000
+        ? "준비"
+        : pay >= 3500 && distance <= 30
+        ? "고민중"
+        : "휴식";
+    document.write(`연봉 : ${pay}만원&lt;br&gt;`);
+    document.write(`출퇴근 거리 : ${distance}km&lt;br&gt;`);
+    document.write(`출근 여부 : ${result}&lt;br&gt;`);
+    document.write(
+      `${
+        distance >= 500
+          ? "비행기"
+          : distance >= 50
+          ? "자가용"
+          : distance >= 10
+          ? "지하철"
+          : "버스"
+      } 이용`
+    );
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const pay = +prompt("연봉 입력") ?? 0;
       const distance = +prompt("출퇴근 거리 입력") ?? 0;
       // let result = "";

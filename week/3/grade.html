@@ -4,9 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
   </head>
   <body>
+    <pre>
+      <code class="language-javascript">
+    const score = +prompt("점수를 입력하세요");
+    const grade =
+      score < 0 || score > 100
+        ? false
+        : score >= 90
+        ? "A"
+        : score >= 80
+        ? "B"
+        : score >= 70
+        ? "C"
+        : score >= 60
+        ? "D"
+        : "F";
+    document.write(
+      !grade
+        ? "올바르지 않은 점수를 입력하였습니다. 다시 입력해주세요."
+        : `당신의 점수는 ${score}점이고, 학점은 ${grade}입니다.`
+    );
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const score = +prompt("점수를 입력하세요");
       const grade =
         score < 0 || score > 100
