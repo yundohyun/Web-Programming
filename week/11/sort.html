@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Sort</h1>
+    <pre>
+      <code class="language-javascript">
+    &#x2F;&#x2F; 역순 정렬
+    const num &#x3D; [3, 8, 10, 2, 6, 5, 1, 4, 7, 9];
+    const result &#x3D; num.sort(() &#x3D;&gt; -1);
+    document.write(&#x60;result : ${result}&lt;br&gt;&#x60;);
+  
+    &#x2F;&#x2F; 객체 정렬
+    const animal &#x3D; [
+      { name: &quot;cat&quot;, weight: 5 },
+      { name: &quot;dog&quot;, weight: 10 },
+      { name: &quot;monkey&quot;, weight: 20 },
+      { name: &quot;lion&quot;, weight: 200 },
+      { name: &quot;elephant&quot;, weight: 1000 },
+    ];
+  
+    const result2 &#x3D; animal.sort(() &#x3D;&gt; 1);
+    document.write(&quot;result2 : &quot;);
+    result2.forEach((item) &#x3D;&gt; document.write(&#x60;${item.name} &#x60;));
+    document.write(&quot;&lt;br&gt;&quot;);
+  
+    const result3 &#x3D; animal.sort(() &#x3D;&gt; -1);
+    document.write(&quot;result3 : &quot;);
+    result3.forEach((item) &#x3D;&gt; document.write(&#x60;${item.name} &#x60;));
+    document.write(&quot;&lt;br&gt;&quot;);
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+      // 역순 정렬
+      const num = [3, 8, 10, 2, 6, 5, 1, 4, 7, 9];
+      const result = num.sort(() => -1);
+      document.write(`result : ${result}<br>`);
+
+      // 객체 정렬
+      const animal = [
+        { name: "cat", weight: 5 },
+        { name: "dog", weight: 10 },
+        { name: "monkey", weight: 20 },
+        { name: "lion", weight: 200 },
+        { name: "elephant", weight: 1000 },
+      ];
+
+      const result2 = animal.sort(() => 1);
+      document.write("result2 : ");
+      result2.forEach((item) => document.write(`${item.name} `));
+      document.write("<br>");
+
+      const result3 = animal.sort(() => -1);
+      document.write("result3 : ");
+      result3.forEach((item) => document.write(`${item.name} `));
+      document.write("<br>");
+    </script>
+  </body>
+</html>
