@@ -3,14 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>For문</h1>
+    <pre>
+      <code class="language-javascript">
+    for (let num &#x3D; 1; num &lt;&#x3D; 10; num++)
+      document.write(&#x60;${num}번째 출력&lt;br&gt;&#x60;);
+      </code>
+    </pre>
     <script>
-      for (let num = 1; num <= 10; num++) {
+      hljs.highlightAll();
+      for (let num = 1; num <= 10; num++)
         document.write(`${num}번째 출력<br>`);
-      }
     </script>
   </body>
 </html>

@@ -3,11 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>삼항연산자</h1>
+    <pre>
+      <code class="language-javascript">
+    &#x2F;&#x2F; const month &#x3D; +prompt(&quot;월을 입력하세요&quot;);
+    &#x2F;&#x2F; const season &#x3D;
+    &#x2F;&#x2F;   month &#x3D;&#x3D; 0 || month &gt; 12
+    &#x2F;&#x2F;     ? false
+    &#x2F;&#x2F;     : month &#x3D;&#x3D; 12 || month &lt; 3
+    &#x2F;&#x2F;     ? &quot;겨울&quot;
+    &#x2F;&#x2F;     : month &lt; 6
+    &#x2F;&#x2F;     ? &quot;봄&quot;
+    &#x2F;&#x2F;     : month &lt; 9
+    &#x2F;&#x2F;     ? &quot;여름&quot;
+    &#x2F;&#x2F;     : &quot;가을&quot;;
+    &#x2F;&#x2F; document.write(
+    &#x2F;&#x2F;   !season
+    &#x2F;&#x2F;     ? &quot;잘못된 월을 입력하였습니다.&quot;
+    &#x2F;&#x2F;     : &#x60;${month}월은 ${season}입니다.&#x60;
+    &#x2F;&#x2F; );
+    const gender &#x3D; prompt(&quot;성별을 입력하세요&quot;).toLowerCase();
+    document.write(
+      ![&quot;male&quot;, &quot;female&quot;, &quot;남자&quot;, &quot;여자&quot;, &quot;남&quot;, &quot;여&quot;].includes(gender)
+        ? &quot;잘못된 성별을 입력하였습니다&quot;
+        : [&quot;male&quot;, &quot;남자&quot;, &quot;남&quot;].includes(gender)
+        ? &quot;군대 가기 싫다&quot;
+        : &quot;어학연수 가야지&quot;
+    );
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       // const month = +prompt("월을 입력하세요");
       // const season =
       //   month == 0 || month > 12

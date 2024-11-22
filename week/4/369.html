@@ -3,11 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>369</h1>
+    <pre>
+      <code class="javascript">
+    for (let i = 1; i <= 30; i++) {
+      document.write(`${i % 3 == 0 ? "짝" : i}&nbsp;`);
+      if (i % 10 == 0) document.write("&lt;br /&gt;");
+    }
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       for (let i = 1; i <= 30; i++) {
         document.write(`${i % 3 == 0 ? "짝" : i}&nbsp;`);
         if (i % 10 == 0) document.write("<br />");

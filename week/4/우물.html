@@ -3,11 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>우물</h1>
+    <pre>
+      <code class="language-javascript">
+    let count &#x3D; 0;
+    let distance &#x3D; 0;
+    while (distance &lt;&#x3D; 100) {
+      distance +&#x3D; 5;
+      count++;
+      distance -&#x3D; distance &lt;&#x3D; 51 ? 1 : 2;
+      &#x2F;&#x2F; if (distance &lt;&#x3D; 51)
+      &#x2F;&#x2F;   distance -&#x3D; 1;
+      &#x2F;&#x2F; else
+      &#x2F;&#x2F;   distance -&#x3D; 2;
+    }
+    document.write(&#x60;우물을 ${count}번째에서 탈출했습니다.&#x60;);
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       let count = 0;
       let distance = 0;
       while (distance <= 100) {

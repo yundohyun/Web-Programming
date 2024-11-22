@@ -3,11 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>구구단</h1>
+    <pre>
+      <code class="language-javascript">
+    const i &#x3D; +prompt(&quot;단 입력&quot;);
+    document.write(&#x60;&lt;h2&gt;${i}단&lt;&#x2F;h2&gt;&#x60;);
+    for (let j &#x3D; 1; j &lt;&#x3D; 9; j++) document.write(&#x60;${i} x ${j} &#x3D; ${i * j}&lt;br&gt;&#x60;);
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const i = +prompt("단 입력");
       document.write(`<h2>${i}단</h2>`);
       for (let j = 1; j <= 9; j++) document.write(`${i} x ${j} = ${i * j}<br>`);

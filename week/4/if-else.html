@@ -3,11 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>중첩 If문</h1>
+    <pre>
+      <code class="language-javascript">
+    let month &#x3D; +prompt(&quot;월 입력&quot;);
+    let season &#x3D; null;
+    &#x2F;&#x2F; 이렇게 쓰지 마세요
+    if (month &gt; 2 &amp;&amp; month &lt; 9) {
+      if (month &lt; 6) {
+        season &#x3D; &quot;봄&quot;;
+      } else {
+        season &#x3D; &quot;여름&quot;;
+      }
+    } else {
+      if (month &gt; 2 &amp;&amp; month &lt; 12) {
+        season &#x3D; &quot;가을&quot;;
+      } else {
+        season &#x3D; &quot;겨울&quot;;
+      }
+    }
+    document.write(&#x60;현재 날씨는 ${season}입니다.&#x60;);
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       let month = +prompt("월 입력");
       let season = null;
       // 이렇게 쓰지 마세요

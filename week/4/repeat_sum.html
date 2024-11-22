@@ -3,11 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
+    <script>
+      hljs.highlightAll();
+    </script>
     <div>
       <h1>For문 합계</h1>
+      <pre>
+        <code class="language-javascript">
+    let sum = 0;
+    for (let i = 1; i <= 10; i++) {
+      sum += i;
+    }
+    document.write(`1부터 10까지의 합은 ${sum}입니다.`);
+        </code>
+      </pre>
       <script>
         let sum = 0;
         for (let i = 1; i <= 10; i++) {
@@ -18,6 +35,17 @@
     </div>
     <div>
       <h1>While문 합계</h1>
+      <pre>
+        <code class="language-javascript">
+    let sum_ = 0;
+    let i = 1;
+    while (i <= 10) {
+      sum_ += i;
+      i++;
+    }
+    document.write(`1부터 10까지의 합은 ${sum_}입니다.`);
+        <code>
+      </pre>
       <script>
         let sum_ = 0;
         let i = 1;
