@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Fira Code";
+  src: url("/font/FiraCode.ttf") format("truetype");
+}
+
+code {
+  font-family: "Fira Code", Consolas, "Courier New", monospace;
+  font-feature-settings: "ss02", "ss04", "ss06", "ss07", "ss09", "cv24", "cv25",
+    "cv26", "cv28", "cv30", "cv32";
+  -webkit-font-feature-settings: "ss02", "ss04", "ss06", "ss07", "ss09", "cv24",
+    "cv25", "cv26", "cv28", "cv30", "cv32";
+  text-rendering: optimizeLegibility;
+  font-size: 14px;
+}
