@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Reduce</h1>
+    <pre>
+      <code class="language-javascript">
+    const num &#x3D; [3, 8, 10, 2, 6, 5, 1, 4, 7, 9];
+    const result &#x3D; num.reduce((sum, i) &#x3D;&gt; sum + i, 0);
+    document.write(&#x60;result : ${result}&lt;br&gt;&#x60;);
+  
+    const cart &#x3D; [
+      { name: &quot;orange&quot;, price: 5000 },
+      { name: &quot;apple&quot;, price: 10000 },
+      { name: &quot;banana&quot;, price: 15000 },
+      { name: &quot;melon&quot;, price: 20000 },
+    ];
+    const price &#x3D; cart.reduce((sum, i) &#x3D;&gt; sum + i.price, 0);
+    document.write(&#x60;price : ${price}&lt;br&gt;&#x60;);
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+      const num = [3, 8, 10, 2, 6, 5, 1, 4, 7, 9];
+      const result = num.reduce((sum, i) => sum + i, 0);
+      document.write(`result : ${result}<br>`);
+
+      const cart = [
+        { name: "orange", price: 5000 },
+        { name: "apple", price: 10000 },
+        { name: "banana", price: 15000 },
+        { name: "melon", price: 20000 },
+      ];
+      const price = cart.reduce((sum, i) => sum + i.price, 0);
+      document.write(`price : ${price}<br>`);
+    </script>
+  </body>
+</html>
