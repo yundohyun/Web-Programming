@@ -7,6 +7,7 @@
       rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
     />
+    <link rel="stylesheet" href="/style/code.css" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
@@ -49,31 +50,31 @@
     </pre>
     <script>
       hljs.highlightAll();
-      let month = +prompt('월 입력')
+      let month = +prompt("월 입력");
       let season = null;
-      switch(month) {
+      switch (month) {
         case 12:
         case 1:
         case 2:
-          season = '겨울';
+          season = "겨울";
           break;
         case 3:
-        case 4: 
-        case 5: 
-          season = '봄';
+        case 4:
+        case 5:
+          season = "봄";
           break;
-        case 6: 
-        case 7: 
-        case 8: 
-          season = '여름';
+        case 6:
+        case 7:
+        case 8:
+          season = "여름";
           break;
-        case 9: 
-        case 10: 
+        case 9:
+        case 10:
         case 11:
-          season = '가을';
+          season = "가을";
           break;
-        default: 
-          break; 
+        default:
+          break;
       }
       document.write(
         !season
@@ -83,4 +84,3 @@
     </script>
   </body>
 </html>
-
