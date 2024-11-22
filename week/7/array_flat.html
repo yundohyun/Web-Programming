@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Array Flat</h1>
-  <script>
-    const arr = [[1,2,3],[4,5],[7,8,9],8,9];
-    document.write("arr : " + JSON.stringify(arr.flat()) + "<br>".repeat(2));
-    document.write("arr.flat() : " + JSON.stringify(arr.flat()) + "<br>".repeat(2));
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array Flat</h1>
+    <pre>
+      <code class="language-javascript">
+    const arr &#x3D; [[1, 2, 3], [4, 5], [7, 8, 9], 8, 9];
+    document.write(&quot;arr : &quot; + JSON.stringify(arr.flat()) + &quot;&lt;br&gt;&quot;.repeat(2));
+    document.write(
+      &quot;arr.flat() : &quot; + JSON.stringify(arr.flat()) + &quot;&lt;br&gt;&quot;.repeat(2)
+    );
+      </code>
+    </pre>
+    <script>
+      hljs.highlightAll();
+      const arr = [[1, 2, 3], [4, 5], [7, 8, 9], 8, 9];
+      document.write("arr : " + JSON.stringify(arr.flat()) + "<br>".repeat(2));
+      document.write(
+        "arr.flat() : " + JSON.stringify(arr.flat()) + "<br>".repeat(2)
+      );
+    </script>
+  </body>
 </html>

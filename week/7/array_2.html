@@ -3,11 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>Array 복습 2</h1>
+    <pre>
+      <code class="language-javascript">
+    const arr &#x3D; [&quot;a&quot;, 4, 2, &quot;b&quot;, 3, 8, 7];
+    document.write(JSON.stringify(arr) + &quot;&lt;br&gt;&quot;.repeat(2));
+  
+    document.write(&quot;arr.slice(3, 6) : &quot; + arr.slice(3, 6) + &quot;&lt;br&gt;&quot;);
+    document.write(
+      &quot;arr.concat(&#39;노회정&#39;, &#39;동양미래대&#39;) : &quot; +
+        arr.concat(&quot;노회정&quot;, &quot;동양미래대&quot;) +
+        &quot;&lt;br&gt;&quot;
+    );
+    document.write(&quot;arr.join(&#39;#&#39;) : &quot; + arr.join(&quot;#&quot;) + &quot;&lt;br&gt;&quot;);
+    document.write(&quot;arr.join([7, 8]) : &quot; + arr.join([7, 8]) + &quot;&lt;br&gt;&quot;);
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const arr = ["a", 4, 2, "b", 3, 8, 7];
       document.write(JSON.stringify(arr) + "<br>".repeat(2));
 

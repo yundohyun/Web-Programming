@@ -3,11 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>Array 복습 1</h1>
+    <pre>
+      <code class="language-javascript">
+    const arr &#x3D; [1, 2, 3, 4, 5];
+    document.write(JSON.stringify(arr) + &quot;&lt;br&gt;&quot;.repeat(2));
+  
+    arr.unshift(0);
+    document.write(
+      &quot;arr.unshift(0) : &quot; + JSON.stringify(arr) + &quot;&lt;br&gt;&quot;.repeat(2)
+    );
+  
+    arr.push(8);
+    document.write(&quot;arr.push(8) : &quot; + JSON.stringify(arr) + &quot;&lt;br&gt;&quot;.repeat(2));
+  
+    arr.pop();
+    document.write(&quot;arr.pop() : &quot; + JSON.stringify(arr) + &quot;&lt;br&gt;&quot;.repeat(2));
+  
+    arr.shift();
+    document.write(&quot;arr.shift() : &quot; + JSON.stringify(arr) + &quot;&lt;br&gt;&quot;.repeat(2));
+  
+    arr.splice(1, 2, &quot;a&quot;, &quot;h&quot;);
+    document.write(
+      &#39;arr.splice(1, 2, &quot;a&quot;, &quot;h&quot;) : &#39; + JSON.stringify(arr) + &quot;&lt;br&gt;&quot;.repeat(2)
+    );
+  
+    arr.splice(2, 0, &quot;가&quot;);
+    document.write(
+      &#39;arr.splice(2, 0, &quot;가&quot;) : &#39; + JSON.stringify(arr) + &quot;&lt;br&gt;&quot;.repeat(2)
+    );
+  
+    document.write(&quot;&lt;hr&gt;&quot;);
+  
+    document.write(&#39;arr.includes(&quot;h&quot;) : &#39; + arr.includes(&quot;h&quot;) + &quot;&lt;br&gt;&quot;);
+    document.write(&#39;arr.includes(&quot;z&quot;) : &#39; + arr.includes(&quot;z&quot;) + &quot;&lt;br&gt;&quot;);
+    document.write(&#39;arr.indexOf(&quot;가&quot;) : &#39; + arr.indexOf(&quot;가&quot;) + &quot;&lt;br&gt;&quot;);
+    document.write(&quot;arr[arr.length - 1] : &quot; + arr[arr.length - 1]);
+    document.write(&quot;arr.at(4) : &quot; + arr.at(4) + &quot;&lt;br&gt;&quot;);
+    document.write(&quot;arr.at(-1) : &quot; + arr.at(-1) + &quot;&lt;br&gt;&quot;);
+    document.write(&quot;arr.at(3) : &quot; + arr.at(3) + &quot;&lt;br&gt;&quot;);
+  
+    document.write(JSON.stringify(arr));
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const arr = [1, 2, 3, 4, 5];
       document.write(JSON.stringify(arr) + "<br>".repeat(2));
 

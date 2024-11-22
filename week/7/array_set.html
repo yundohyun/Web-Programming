@@ -3,11 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>Array & Set</h1>
+    <pre>
+      <code class="language-javascript">
+    &#x2F;&#x2F; let a &#x3D; [];
+    &#x2F;&#x2F; a[0] &#x3D; 1;
+    &#x2F;&#x2F; a[1] &#x3D; &quot;korea&quot;;
+    &#x2F;&#x2F; a[2] &#x3D; &quot;water&quot;;
+    &#x2F;&#x2F; document.write(&quot;&lt;br&gt;1. a &#x3D; []: &quot;);
+    &#x2F;&#x2F; for (let i &#x3D; 0; i &lt; a.length; i++) {
+    &#x2F;&#x2F;   document.write(&quot;&lt;br&gt;&quot; + a[i] + &quot; &quot;);
+    &#x2F;&#x2F; }
+  
+    &#x2F;&#x2F; &#x2F;&#x2F;Array():
+    &#x2F;&#x2F; let arr &#x3D; Array(5);
+    &#x2F;&#x2F; arr.fill(&quot;love&quot;);
+    &#x2F;&#x2F; document.write(&quot;&lt;br&gt;2. arr &#x3D; Array(5) : &quot;);
+    &#x2F;&#x2F; for (let i &#x3D; 0; i &lt; arr.length; i++) {
+    &#x2F;&#x2F;   document.write(&quot;&lt;br&gt;&quot; + arr[i] + &quot; &quot;);
+    &#x2F;&#x2F; }
+  
+    &#x2F;&#x2F; &#x2F;&#x2F;3.Set()-ade bende salah, nnt betulkn balik-
+    &#x2F;&#x2F; let arrset &#x3D; new Set([1, 1, 2, 2, 3, 3]);
+    &#x2F;&#x2F; document.write(&quot;&lt;br&gt;3. arrset &#x3D; new Set([1,1,2,2,3,3] : &quot;);
+    &#x2F;&#x2F; document.write(&quot;&lt;br&gt;&quot; + arrset.size());
+  
+    const a &#x3D; [1, &quot;korea&quot;, &quot;water&quot;];
+    document.write(&quot;a : &quot; + JSON.stringify(a) + &quot;&lt;br&gt;&quot;.repeat(2));
+  
+    const arr &#x3D; Array(5).fill(&quot;love&quot;);
+    document.write(&quot;arr : &quot; + JSON.stringify(arr) + &quot;&lt;br&gt;&quot;.repeat(2));
+  
+    const arrset &#x3D; new Set([1, 1, 2, 2, 3, 3]);
+    document.write(
+      &quot;arrset : &quot; + JSON.stringify([...arrset]) + &quot;&lt;br&gt;&quot;.repeat(2)
+    );
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       // let a = [];
       // a[0] = 1;
       // a[1] = "korea";
@@ -37,7 +80,9 @@
       document.write("arr : " + JSON.stringify(arr) + "<br>".repeat(2));
 
       const arrset = new Set([1, 1, 2, 2, 3, 3]);
-      document.write("arrset : " + JSON.stringify([...arrset]) + "<br>".repeat(2));
+      document.write(
+        "arrset : " + JSON.stringify([...arrset]) + "<br>".repeat(2)
+      );
     </script>
   </body>
 </html>

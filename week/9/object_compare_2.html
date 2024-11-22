@@ -3,11 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>Object 비교2</h1>
+    <pre>
+      <code class="language-javascript">
+    const a &#x3D; { name: &quot;lee&quot; };
+    const data &#x3D; {
+      name: { first: &quot;lee&quot;, last: &quot;malja&quot; },
+      gender: &quot;man&quot;,
+      print: () &#x3D;&gt; {
+        document.write(&quot;data.print() 호출&lt;br&gt;&quot;);
+      },
+    };
+    document.write(&#x60;a.name : ${a.name}&lt;br&gt;&#x60;);
+    document.write(&#x60;data.name.first : ${data.name.first}&lt;br&gt;&#x60;);
+    document.write(&#x60;data.name.last : ${data.name.last}&lt;br&gt;&#x60;);
+    document.write(&#x60;a[&quot;name&quot;] : ${a[&quot;name&quot;]}&lt;br&gt;&#x60;);
+    document.write(&#x60;data[&quot;name&quot;][&quot;first&quot;] : ${data[&quot;name&quot;][&quot;first&quot;]}&lt;br&gt;&#x60;);
+    document.write(&#x60;data[&quot;name&quot;][&quot;last&quot;] : ${data[&quot;name&quot;][&quot;last&quot;]}&lt;br&gt;&#x60;);
+    data.print();
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const a = { name: "lee" };
       const data = {
         name: { first: "lee", last: "malja" },

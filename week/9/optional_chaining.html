@@ -3,11 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>Optional Chaining</h1>
+    <pre>
+      <code class="language-javascript">
+    const me &#x3D; {
+      name: &quot;윤도현&quot;,
+      gender: &quot;남자&quot;,
+      age: 20,
+      friend: {
+        best: [&quot;세경&quot;, &quot;영민&quot;, &quot;산하&quot;],
+        worst: [&quot;유진&quot;, &quot;민준&quot;, &quot;경민&quot;],
+      },
+      notebook: &quot;MacBook Air M1 16GB&quot;,
+      server: &quot;7530U 32GB&quot;,
+    };
+    delete me?.friend;
+    document.write(&#x60;me?.name : ${me?.name}&lt;br&gt;&#x60;);
+    document.write(&#x60;me?.gender : ${me?.gender}&lt;br&gt;&#x60;);
+    document.write(&#x60;me?.friend?.girl : ${me?.friend?.girl}&lt;br&gt;&#x60;);
+    document.write(&#x60;me?.friend?.best : ${me?.friend?.best}&lt;br&gt;&#x60;);
+    document.write(&#x60;me?.friend?.worst : ${me?.friend?.worst}&lt;br&gt;&#x60;);
+    document.write(&#x60;me?.house : ${me?.house}&lt;br&gt;&#x60;);
+    document.write(&#x60;me?.desktop : ${me?.desktop}&lt;br&gt;&#x60;);
+    document.write(&#x60;me?.notebook : ${me?.notebook}&lt;br&gt;&#x60;);
+    document.write(&#x60;me?.server : ${me?.server}&lt;br&gt;&#x60;);
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const me = {
         name: "윤도현",
         gender: "남자",

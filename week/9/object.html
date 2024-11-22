@@ -3,11 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>Object</h1>
+    <pre>
+      <code class="language-javascript">
+    const a &#x3D; 4;
+    let b &#x3D; 5;
+    c &#x3D; 7;
+  
+    const arr &#x3D; [];
+    arr[0] &#x3D; 1;
+    arr[1] &#x3D; 2;
+  
+    const arr1 &#x3D; [1, 2, 3, 4, 5, &quot;a&quot;, 3.14];
+    for (let i &#x3D; 0; i &lt; arr1.length; i++) document.write(arr1[i] + &quot; &quot;);
+    document.write(&quot;&lt;br&gt;&quot;);
+  
+    const obj &#x3D; {}; &#x2F;&#x2F; Empty Object
+    const obj1 &#x3D; {
+      nation: &quot;Korea&quot;,
+      age: 20,
+      address: &quot;Seoul&quot;,
+      phone: &quot;010-1234-5678&quot;,
+    };
+    obj1.name &#x3D; &quot;윤도현&quot;;
+    obj1[&quot;name&quot;] &#x3D; &quot;현도윤&quot;;
+    for (const [k, v] of Object.entries(obj1))
+      document.write(&#x60;obj1[&quot;${k}&quot;] &#x3D; ${v}&lt;br&gt;&#x60;);
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const a = 4;
       let b = 5;
       c = 7;

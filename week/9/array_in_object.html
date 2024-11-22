@@ -3,11 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>Array 안의 Object</h1>
+    <pre>
+      <code class="language-javascript">
+    const arr = [
+      { name: "김말동", age: 21, address: "인천" },
+      { name: "이말동", age: 22, address: "서울" },
+      { name: "박말동", age: 23, address: "부산" },
+      { name: "최말동", age: 24, address: "대구" },
+      { name: "정말동", age: 25, address: "광주" },
+    ];
+  
+    const person = { name: "이순신" };
+    person.address = "전주";
+    document.write(`person.name = ${person.name}&lt;br&gt;`);
+  
+    person.name = "윤도현";
+    document.write(`person.name = ${person.name}&lt;br&gt;`);
+  
+    delete person.name;
+    document.write(`person.name = ${person.name}&lt;br&gt;`);
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const arr = [
         { name: "김말동", age: 21, address: "인천" },
         { name: "이말동", age: 22, address: "서울" },

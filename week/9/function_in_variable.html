@@ -3,11 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>Function 안에 변수</h1>
+    <pre>
+      <code class="language-javascript">
+    function hello() {}
+    hello.a = "Hello";
+    document.write(`hello.a = ${hello.a}&gt;br&lt;`);
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       function hello() {}
       hello.a = "Hello";
       document.write(`hello.a = ${hello.a}<br>`);

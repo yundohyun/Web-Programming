@@ -3,11 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>Object 속성 이름 만들기</h1>
+    <pre>
+      <code class="language-javascript">
+    const car &#x3D; {
+      type: &quot;SUV&quot;,
+      &quot;product-year&quot;: 2025,
+      &quot;car company&quot;: &quot;hyundai&quot;,
+    };
+    car.price &#x3D; 3e7;
+    car[&quot;car company&quot;] &#x3D; &quot;kia&quot;;
+    document.write(&#x60;car[&quot;product-year&quot;] &#x3D; ${car[&quot;product-year&quot;]}&lt;br&gt;&#x60;);
+    document.write(&#x60;car[&quot;car company&quot;] &#x3D; ${car[&quot;car company&quot;]}&lt;br&gt;&#x60;);
+    document.write(&#x60;car.price &#x3D; ${car.price}&lt;br&gt;&#x60;);
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       const car = {
         type: "SUV",
         "product-year": 2025,

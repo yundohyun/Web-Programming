@@ -3,11 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>ES6 Arrow Function</h1>
+    <pre>
+      <code class="language-javascript">
+    add1 &#x3D; () &#x3D;&gt; {
+      document.write(&quot;메롱&quot;);
+    };
+  
+    add2 &#x3D; () &#x3D;&gt; {
+      return &quot;&lt;br&gt;밥먹자&quot;;
+    };
+  
+    add3 &#x3D; (msg) &#x3D;&gt; {
+      document.write(&quot;&lt;br&gt; 전달받은 메시지 &quot; + msg);
+    };
+    add3(&quot;군데 가자&quot;);
+    add3(&quot;유럽 가자&quot;);
+  
+    add4 &#x3D; (a, b) &#x3D;&gt; {
+      let res &#x3D; a + b;
+      return res;
+    };
+  
+    add1();
+    document.write(add2());
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       add1 = () => {
         document.write("메롱");
       };

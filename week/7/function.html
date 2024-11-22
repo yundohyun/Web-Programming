@@ -3,11 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <h1>Function</h1>
+    <pre>
+      <code class="language-javascript">
+    function add1() {
+      document.write(&quot;메롱&quot;);
+    }
+  
+    function add2() {
+      return &quot;&lt;br&gt;밥먹자&quot;;
+    }
+  
+    function add3(msg) {
+      document.write(&quot;&lt;br&gt; 전달받은 메시지 &quot; + msg);
+    }
+    add3(&quot;시험잘보자&quot;);
+    add3(&quot;미팅가자&quot;);
+    add3(&quot;우주여행가자&quot;);
+  
+    function add4(a, b) {
+      let res &#x3D; a + b;
+      return res;
+    }
+  
+    add1();
+    document.write(add2());
+      </code>
+    </pre>
     <script>
+      hljs.highlightAll();
       function add1() {
         document.write("메롱");
       }
