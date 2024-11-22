@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Map</h1>
+    <pre>
+      <code class="language-javascript">
+    const arr &#x3D; [1, 2, 3, 4, 5];
+    const result &#x3D; arr.map((v) &#x3D;&gt; v * 2);
+    document.write(&quot;arr : &quot;);
+    arr.forEach((v) &#x3D;&gt; document.write(v + &quot; &quot;));
+    document.write(&quot;&lt;br&gt;result : &quot;);
+    result.forEach((v) &#x3D;&gt; document.write(v + &quot; &quot;));
+    document.write(&quot;&lt;br&gt;&quot;);
+  
+    const items &#x3D; [
+      { id: 1, name: &quot;tom&quot; },
+      { id: 2, name: &quot;jerry&quot; },
+    ];
+    const package &#x3D; items.map((v) &#x3D;&gt; (v.id +&#x3D; 2000));
+    document.write(&quot;id : &quot;);
+    package.forEach((v) &#x3D;&gt; document.write(v + &quot; &quot;));
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+      const arr = [1, 2, 3, 4, 5];
+      const result = arr.map((v) => v * 2);
+      document.write("arr : ");
+      arr.forEach((v) => document.write(v + " "));
+      document.write("<br>result : ");
+      result.forEach((v) => document.write(v + " "));
+      document.write("<br>");
+
+      const items = [
+        { id: 1, name: "tom" },
+        { id: 2, name: "jerry" },
+      ];
+      const package = items.map((v) => (v.id += 2000));
+      document.write("id : ");
+      package.forEach((v) => document.write(v + " "));
+    </script>
+  </body>
+</html>
