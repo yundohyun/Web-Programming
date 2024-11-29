@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>function with DOM</h1>
+    <pre>
+      <code class="language-html">
+    &lt;h3 onclick&#x3D;&quot;change();&quot;&gt;Click Me&lt;&#x2F;h3&gt;
+    &lt;h4&gt;Don&#39;t Click Me&lt;&#x2F;h4&gt;
+    &lt;script&gt;
+      function change() {
+        const h3 &#x3D; document.querySelector(&quot;h3&quot;);
+        h3.style.backgroundColor &#x3D; &quot;#80ff80&quot;;
+        h3.style.fontSize &#x3D; &quot;56px&quot;;
+      }
+    &lt;&#x2F;script&gt;
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+    </script>
+    <h3 onclick="change();">Click Me</h3>
+    <h4>Don't Click Me</h4>
+    <script>
+      function change() {
+        const h3 = document.querySelector("h3");
+        h3.style.backgroundColor = "#80ff80";
+        h3.style.fontSize = "56px";
+      }
+    </script>
+  </body>
+</html>
