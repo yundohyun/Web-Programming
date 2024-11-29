@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>getElementById</h1>
+    <pre>
+      <code class="language-html">
+    &lt;div&gt;
+      &lt;p id&#x3D;&quot;p&quot; onmouseover&#x3D;&quot;over();&quot; onmouseout&#x3D;&quot;out();&quot;&gt;I Love You.&lt;&#x2F;p&gt;
+    &lt;&#x2F;div&gt;
+    &lt;script&gt;
+      const p &#x3D; document.getElementById(&quot;p&quot;);
+      function over() {
+        p.style.backgroundColor &#x3D; &quot;orchid&quot;;
+        p.innerHTML &#x3D; &quot;I Love You.&quot;;
+      }
+      function out() {
+        p.style.backgroundColor &#x3D; &quot;white&quot;;
+        p.innerHTML &#x3D; &quot;&lt;img src&#x3D;&#39;.&#x2F;images&#x2F;Koala.png&#39; &#x2F;&gt;&quot;;
+      }
+    &lt;&#x2F;script&gt;
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+    </script>
+    <div>
+      <p id="p" onmouseover="over();" onmouseout="out();">I Love You.</p>
+    </div>
+    <script>
+      const p = document.getElementById("p");
+      function over() {
+        p.style.backgroundColor = "orchid";
+        p.innerHTML = "I Love You.";
+      }
+      function out() {
+        p.style.backgroundColor = "white";
+        p.innerHTML = "<img src='./images/Koala.png' />";
+      }
+    </script>
+  </body>
+</html>
