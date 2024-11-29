@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body onload="init();">
+    <h1>addEventListener</h1>
+    <pre>
+      <code class="language-html">
+    &lt;body onload&#x3D;&quot;init();&quot;&gt;
+      &lt;h1&gt;addEventListener&lt;&#x2F;h1&gt;
+      &lt;div&gt;I Want To Go Home T.T&lt;&#x2F;div&gt;
+      &lt;script&gt;
+        function init() {
+          div.addEventListener(&quot;mousedown&quot;, () &#x3D;&gt; {
+            div.textContent &#x3D; &quot;집 갈 준비 완료!&quot;;
+            div.style.color &#x3D; &quot;lime&quot;;
+            div.style.backgroundColor &#x3D; &quot;yellow&quot;;
+          });
+          const div &#x3D; document.querySelector(&quot;body div&quot;);
+          div.addEventListener(&quot;click&quot;, () &#x3D;&gt; {
+            div.textContent &#x3D; &quot;집 드가자아아아ㅏㅏㅏㅏㅏㅏ&quot;;
+            div.style.color &#x3D; &quot;red&quot;;
+            div.style.backgroundColor &#x3D; &quot;#80ff80&quot;;
+          });
+        }
+      &lt;&#x2F;script&gt;
+    &lt;&#x2F;body&gt;
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+    </script>
+    <div>I Want To Go Home T.T</div>
+    <script>
+      function init() {
+        const div = document.querySelector("body div");
+        div.addEventListener("mousedown", () => {
+          div.textContent = "집 갈 준비 완료!";
+          div.style.color = "lime";
+          div.style.backgroundColor = "yellow";
+        });
+        div.addEventListener("click", () => {
+          div.textContent = "집 드가자아아아ㅏㅏㅏㅏㅏㅏ";
+          div.style.color = "red";
+          div.style.backgroundColor = "#80ff80";
+        });
+      }
+    </script>
+  </body>
+</html>
