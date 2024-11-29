@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>querySelector 2</h1>
+    <pre>
+      <code class="language-html">
+    &lt;div&gt;
+      Lorem ipsum dolor &lt;span&gt;apple&lt;&#x2F;span&gt; sit amet consectetur
+      &lt;span&gt;apple&lt;&#x2F;span&gt; adipisicing elit. Porro &lt;span&gt;apple&lt;&#x2F;span&gt; a officiis,
+      rerum natus nesciunt deleniti nulla pariatur quia est quisquam quos
+      molestias &lt;span&gt;apple&lt;&#x2F;span&gt; hic totam nam facilis dolore iusto minima.
+      Quis.
+    &lt;&#x2F;div&gt;
+    &lt;button onclick&#x3D;&quot;change();&quot;&gt;Click Me&lt;&#x2F;button&gt;
+    &lt;button onclick&#x3D;&quot;banana();&quot;&gt;Click Mee&lt;&#x2F;button&gt;
+    &lt;button onclick&#x3D;&quot;wtf();&quot;&gt;WTF&lt;&#x2F;button&gt;
+    &lt;button onclick&#x3D;&quot;remove();&quot;&gt;Remove&lt;&#x2F;button&gt;
+    &lt;script&gt;
+      function change() {
+        document.querySelectorAll(&quot;div span&quot;).forEach((s) &#x3D;&gt; {
+          s.style.display &#x3D; &quot;inline&quot;;
+          s.style.fontFamily &#x3D; &quot;궁서체&quot;;
+          s.style.color &#x3D; &quot;red&quot;;
+          s.textContent &#x3D; &quot;사과&quot;;
+        });
+      }
+
+      function banana() {
+        document.querySelectorAll(&quot;div span&quot;).forEach((s) &#x3D;&gt; {
+          s.style.display &#x3D; &quot;inline&quot;;
+          s.style.fontFamily &#x3D; &quot;궁서체&quot;;
+          s.style.color &#x3D; &quot;yellow&quot;;
+          s.textContent &#x3D; &quot;바나나&quot;;
+        });
+      }
+
+      function wtf() {
+        document.querySelectorAll(&quot;button&quot;).forEach((b) &#x3D;&gt; {
+          b.style.border &#x3D; &quot;2px dashed #80ff80&quot;;
+          b.style.backgroundColor &#x3D; &quot;#d0ffd0&quot;;
+        });
+      }
+  
+      function remove() {
+        document.querySelectorAll(&quot;div span&quot;).forEach((s) &#x3D;&gt; s.remove());
+      }
+    &lt;&#x2F;script&gt;
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+    </script>
+    <div>
+      Lorem ipsum dolor <span>apple</span> sit amet consectetur
+      <span>apple</span> adipisicing elit. Porro <span>apple</span> a officiis,
+      rerum natus nesciunt deleniti nulla pariatur quia est quisquam quos
+      molestias <span>apple</span> hic totam nam facilis dolore iusto minima.
+      Quis.
+    </div>
+    <button onclick="change();">Click Me</button>
+    <button onclick="banana();">Click Mee</button>
+    <button onclick="wtf();">WTF??</button>
+    <button onclick="remove();">Remove</button>
+    <script>
+      function change() {
+        document.querySelectorAll("div span").forEach((s) => {
+          s.style.display = "inline";
+          s.style.fontFamily = "궁서체";
+          s.style.color = "red";
+          s.textContent = "사과";
+        });
+      }
+
+      function banana() {
+        document.querySelectorAll("div span").forEach((s) => {
+          s.style.display = "inline";
+          s.style.fontFamily = "궁서체";
+          s.style.color = "yellow";
+          s.textContent = "바나나";
+        });
+      }
+
+      function wtf() {
+        document.querySelectorAll("button").forEach((b) => {
+          b.style.border = "2px dashed #80ff80";
+          b.style.backgroundColor = "#d0ffd0";
+        });
+      }
+
+      function remove() {
+        document
+          .querySelectorAll("div span")
+          .forEach((s) => (s.style.display = "none"));
+      }
+    </script>
+  </body>
+</html>
