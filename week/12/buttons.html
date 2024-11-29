@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Buttons</h1>
+    <pre>
+      <code class="language-html">
+    &lt;div&gt;
+      &lt;h3&gt;Q1. 누가 제일 이쁘니?&lt;&#x2F;h3&gt;
+      &lt;button id&#x3D;&quot;q1&quot; onclick&#x3D;&quot;q(1);&quot;&gt;정답&lt;&#x2F;button&gt;
+      &lt;h3&gt;Q2. 죽는 것이 문제일까, 사는 것이 문제일까?&lt;&#x2F;h3&gt;
+      &lt;button id&#x3D;&quot;q2&quot; onclick&#x3D;&quot;q(2);&quot;&gt;정답&lt;&#x2F;button&gt;
+    &lt;&#x2F;div&gt;
+    &lt;script&gt;
+      function q(num) {
+        const v &#x3D; document.querySelector(&#x60;#q${num}&#x60;);
+        v.textContent &#x3D; [&quot;백설공주&quot;,&nbsp;&quot;둘다 문제다&quot;][num - 1];
+        v.style.color &#x3D; [&quot;orange&quot;,&nbsp;&quot;red&quot;][num - 1];
+        v.style.fontSize &#x3D; [&quot;36px&quot;,&nbsp;&quot;56px&quot;][num - 1];
+      }
+    &lt;&#x2F;script&gt;
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+    </script>
+    <div>
+      <h3>Q1. 누가 제일 이쁘니?</h3>
+      <button id="q1" onclick="q(1);">정답</button>
+      <h3>Q2. 죽는 것이 문제일까, 사는 것이 문제일까?</h3>
+      <button id="q2" onclick="q(2);">정답</button>
+    </div>
+    <script>
+      function q(num) {
+        const v = document.querySelector(`#q${num}`);
+        v.textContent = ["백설공주", "둘다 문제다"][num - 1];
+        v.style.color = ["orange", "red"][num - 1];
+        v.style.fontSize = ["36px", "56px"][num - 1];
+      }
+    </script>
+  </body>
+</html>
