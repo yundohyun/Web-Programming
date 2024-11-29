@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>CSS</h1>
+    <pre>
+      <code class="language-html">
+    &lt;div&gt;
+      &lt;style&gt;
+        #h2 {
+          color: blue;
+        }
+        .h5 {
+          color: violet;
+          background-color: skyblue;
+        }
+        h3 {
+          color: red;
+        }
+      &lt;&#x2F;style&gt;
+      &lt;p
+        onmouseover&#x3D;&quot;this.style.backgroundColor &#x3D; &#39;pink&#39;;&quot;
+        onmouseout&#x3D;&quot;this.style.backgroundColor &#x3D; &#39;yellow&#39;;&quot;
+      &gt;
+        dongyang
+      &lt;&#x2F;p&gt;
+      &lt;h3&gt;YC 1&lt;&#x2F;h3&gt;
+      &lt;h3 id&#x3D;&quot;h2&quot;&gt;YC 2&lt;&#x2F;h3&gt;
+      &lt;h3 id&#x3D;&quot;h3&quot;&gt;YC 3&lt;&#x2F;h3&gt;
+      &lt;h3&gt;YC 4&lt;&#x2F;h3&gt;
+      &lt;h3 class&#x3D;&quot;h5&quot;&gt;YC 5&lt;&#x2F;h3&gt;
+      &lt;h3&gt;YC 6&lt;&#x2F;h3&gt;
+      &lt;h3 class&#x3D;&quot;h5&quot;&gt;YC 7&lt;&#x2F;h3&gt;
+      &lt;h3&gt;YC 8&lt;&#x2F;h3&gt;
+      &lt;h3 class&#x3D;&quot;h5&quot;&gt;YC 9&lt;&#x2F;h3&gt;
+    &lt;&#x2F;div&gt;
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+    </script>
+    <div>
+      <style>
+        #h2 {
+          color: blue;
+        }
+        .h5 {
+          color: violet;
+          background-color: skyblue;
+        }
+        h3 {
+          color: red;
+        }
+      </style>
+      <p
+        onmouseover="this.style.backgroundColor = 'pink';"
+        onmouseout="this.style.backgroundColor = 'yellow';"
+      >
+        dongyang
+      </p>
+      <h3>YC 1</h3>
+      <h3 id="h2">YC 2</h3>
+      <h3 id="h3">YC 3</h3>
+      <h3>YC 4</h3>
+      <h3 class="h5">YC 5</h3>
+      <h3>YC 6</h3>
+      <h3 class="h5">YC 7</h3>
+      <h3>YC 8</h3>
+      <h3 class="h5">YC 9</h3>
+    </div>
+  </body>
+</html>
