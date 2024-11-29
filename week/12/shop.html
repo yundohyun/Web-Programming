@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Shop</h1>
+    <pre>
+      <code class="language-html">
+    &lt;div&gt;
+      &lt;input type&#x3D;&quot;checkbox&quot; onchange&#x3D;&quot;change();&quot; &#x2F;&gt;
+      hap &lt;price&gt;10000&lt;&#x2F;price&gt;원&lt;br &#x2F;&gt;
+      &lt;input type&#x3D;&quot;checkbox&quot; onchange&#x3D;&quot;change();&quot; &#x2F;&gt;
+      shoes &lt;price&gt;20000&lt;&#x2F;price&gt;원&lt;br &#x2F;&gt;
+      &lt;input type&#x3D;&quot;checkbox&quot; onchange&#x3D;&quot;change();&quot; &#x2F;&gt;
+      bag &lt;price&gt;30000&lt;&#x2F;price&gt;원&lt;br &#x2F;&gt;
+      &lt;input type&#x3D;&quot;checkbox&quot; onchange&#x3D;&quot;change();&quot; &#x2F;&gt;
+      shirt &lt;price&gt;50000&lt;&#x2F;price&gt;원&lt;br &#x2F;&gt;
+      총 &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;total&quot; style&#x3D;&quot;width: 80px&quot; value&#x3D;&quot;0&quot; &#x2F;&gt;원
+    &lt;&#x2F;div&gt;
+    &lt;script&gt;
+      function change() {
+        let total &#x3D; 0;
+        document.querySelectorAll(&quot;div input[type&#x3D;checkbox]&quot;).forEach((p, i) &#x3D;&gt; {
+          if (p.checked)
+            total +&#x3D; +document.querySelectorAll(&quot;div price&quot;)[i].textContent;
+        });
+        document.querySelector(&quot;div #total&quot;).value &#x3D; total;
+      }
+    &lt;&#x2F;script&gt;
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+    </script>
+    <div>
+      <input type="checkbox" onchange="change();" />
+      hap <price>10000</price>원<br />
+      <input type="checkbox" onchange="change();" />
+      shoes <price>20000</price>원<br />
+      <input type="checkbox" onchange="change();" />
+      bag <price>30000</price>원<br />
+      <input type="checkbox" onchange="change();" />
+      shirt <price>50000</price>원<br />
+      총 <input type="text" id="total" style="width: 80px" value="0" />원
+    </div>
+    <script>
+      function change() {
+        let total = 0;
+        document.querySelectorAll("div input[type=checkbox]").forEach((p, i) => {
+          if (p.checked)
+            total += +document.querySelectorAll("div price")[i].textContent;
+        });
+        document.querySelector("div #total").value = total;
+      }
+    </script>
+  </body>
+</html>
