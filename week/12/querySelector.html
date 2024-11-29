@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>querySelector</h1>
+    <pre>
+      <code class="language-html">
+    &lt;div&gt;
+      &lt;h3&gt;Header 1&lt;&#x2F;h3&gt;
+      &lt;h3 id&#x3D;&quot;h2&quot;&gt;Header 2&lt;&#x2F;h3&gt;
+      &lt;h3 class&#x3D;&quot;h3&quot;&gt;Header 3&lt;&#x2F;h3&gt;
+      &lt;h3&gt;Header 4&lt;&#x2F;h3&gt;
+      &lt;h3&gt;Header 5&lt;&#x2F;h3&gt;
+      &lt;h3&gt;Header 6&lt;&#x2F;h3&gt;
+      &lt;h3&gt;Header 7&lt;&#x2F;h3&gt;
+    &lt;&#x2F;div&gt;
+    &lt;script&gt;
+      const h1 &#x3D; document.querySelector(&quot;h3&quot;);
+      h1.style.color &#x3D; &quot;red&quot;;
+  
+      const h2 &#x3D; document.querySelector(&quot;#h2&quot;);
+      const h2_2 &#x3D; document.getElementById(&quot;h2&quot;);
+      h2.style.border &#x3D; &quot;2px dotted blue&quot;;
+      h2.innerHTML &#x3D;
+        &quot;Header 2 &lt;i&gt;(also changed)&lt;&#x2F;i&gt;&lt;img width&#x3D;&#39;48px&#39; src&#x3D;&#39;.&#x2F;images&#x2F;puppy.png&#39;&#x2F;&gt;&quot;;
+  
+      const h3 &#x3D; document.querySelector(&quot;.h3&quot;);
+      const h3_2 &#x3D; document.getElementsByClassName(&quot;h3&quot;)[0];
+      h3.style.fontFamily &#x3D; &quot;궁서체&quot;;
+      h3.textContent &#x3D; &quot;Header 3 (changed)&quot;;
+  
+      const h_all &#x3D; document.querySelectorAll(&quot;h3&quot;);
+      for (let i &#x3D; 0; i &lt; h_all.length; i++)
+        h_all[i].style.backgroundColor &#x3D; i % 2 &#x3D;&#x3D; 0 ? &quot;pink&quot; : &quot;yellowgreen&quot;;
+    &lt;&#x2F;script&gt;
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+    </script>
+    <div>
+      <h3>Header 1</h3>
+      <h3 id="h2">Header 2</h3>
+      <h3 class="h3">Header 3</h3>
+      <h3>Header 4</h3>
+      <h3>Header 5</h3>
+      <h3>Header 6</h3>
+      <h3>Header 7</h3>
+    </div>
+    <script>
+      const h1 = document.querySelector("h3");
+      h1.style.color = "red";
+
+      const h2 = document.querySelector("#h2");
+      const h2_2 = document.getElementById("h2");
+      h2.style.border = "2px dotted blue";
+      h2.innerHTML =
+        "Header 2 <i>(also changed)</i><img width='48px' src='./images/puppy.png'/>";
+
+      const h3 = document.querySelector(".h3");
+      const h3_2 = document.getElementsByClassName("h3")[0];
+      h3.style.fontFamily = "궁서체";
+      h3.textContent = "Header 3 (changed)";
+
+      const h_all = document.querySelectorAll("h3");
+      for (let i = 0; i < h_all.length; i++)
+        h_all[i].style.backgroundColor = i % 2 == 0 ? "pink" : "yellowgreen";
+    </script>
+  </body>
+</html>
