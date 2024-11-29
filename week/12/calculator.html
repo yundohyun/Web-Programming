@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <pre>
+      <code class="language-html">
+    &lt;div&gt;
+      exp : &lt;input id&#x3D;&quot;input&quot; &#x2F;&gt;
+      &lt;button onclick&#x3D;&quot;result();&quot;&gt;compute&lt;&#x2F;button&gt;
+      &lt;br &#x2F;&gt;
+      &lt;input id&#x3D;&quot;result&quot; &#x2F;&gt;
+      result : &lt;input id&#x3D;&quot;result&quot; style&#x3D;&quot;width: 200px&quot; &#x2F;&gt;
+    &lt;&#x2F;div&gt;
+    &lt;script&gt;
+      function result() {
+        const input &#x3D; document.querySelector(&quot;#input&quot;);
+        const result &#x3D; document.querySelector(&quot;#result&quot;);
+        result.value &#x3D; &#x60;${input.value} &#x3D; ${eval(input.value)}&#x60;;
+        input.value &#x3D; &quot;&quot;;
+      }
+    &lt;&#x2F;script&gt;
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+    </script>
+    <div>
+      exp : <input id="input" />
+      <button onclick="result();">compute</button>
+      <br />
+      result : <input id="result" style="width: 200px" />
+    </div>
+    <script>
+      function result() {
+        const input = document.querySelector("#input");
+        const result = document.querySelector("#result");
+        result.value = `${input.value} = ${eval(input.value)}`;
+        input.value = "";
+      }
+    </script>
+  </body>
+</html>
