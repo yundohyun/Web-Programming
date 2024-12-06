@@ -147,7 +147,7 @@
 
       while (!answer.word) {
         const word_p = prompt("제시어를 입력하세요.");
-        if (!word_p || !/^[가-힣+]$/g.test(word_p) || word_p.length < 2)
+        if (!word_p || !/^[가-힣]+$/g.test(word_p) || word_p.length < 2)
           continue;
         word.textContent = word_p;
         answer.word = confirm(`'${word_p}'이(가) 맞습니까?`);
