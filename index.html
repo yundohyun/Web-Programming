@@ -412,6 +412,17 @@
           <a href="https://github.com/yundohyun" target="_blank">yundohyun</a>
         </h4>
       </footer>
+      <script>
+        document.querySelectorAll("a").forEach((a) => {
+          if (a.target == "iframe")
+            a.href += new URL(location.href).searchParams
+              .entries()
+              .reduce((a, [k, v]) => a + `${k}=${v}&`, "?")
+              .split("&")
+              .slice(0, -1)
+              .join("&");
+        });
+      </script>
     </div>
   </body>
 </html>
