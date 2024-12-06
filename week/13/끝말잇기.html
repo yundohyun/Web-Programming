@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>끝말잇기</h1>
+    <pre>
+      <code class="language-html">
+    &lt;div&gt;
+      &lt;span id&#x3D;&quot;num&quot;&gt;&lt;&#x2F;span&gt;명이 끝말잇기를 시작합니다.
+      &lt;hr &#x2F;&gt;
+    &lt;&#x2F;div&gt;
+    &lt;style&gt;
+      body &gt; div span {
+        color: red;
+        font-size: 24px;
+        border: 2px blue dotted;
+        padding-inline: 3px;
+      }
+    &lt;&#x2F;style&gt;
+    &lt;script&gt;
+      let answer;
+      while (!answer) {
+        const num &#x3D; +prompt(&quot;끝말잇기를 할 인원을 입력하세요.&quot;) || 3;
+        document.querySelector(&quot;#num&quot;).textContent &#x3D; num;
+        answer &#x3D; confirm(&#x60;${num}명이 맞습니까?&#x60;);
+      }
+    &lt;&#x2F;script&gt;
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+    </script>
+    <div>
+      <span id="num"></span>명이 끝말잇기를 시작합니다.
+      <hr />
+    </div>
+    <style>
+      body > div span {
+        color: red;
+        font-size: 24px;
+        border: 2px blue dotted;
+        padding-inline: 3px;
+      }
+    </style>
+    <script>
+      let answer;
+      while (!answer) {
+        const num = +prompt("끝말잇기를 할 인원을 입력하세요.");
+        if (isNaN(num) || !num) continue;
+        document.querySelector("#num").textContent = num;
+        answer = confirm(`${num}명이 맞습니까?`);
+      }
+    </script>
+  </body>
+</html>
