@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>addEventListener</h1>
+    <pre>
+      <code class="language-html">
+    &lt;div&gt;집 가고 싶다&lt;&#x2F;div&gt;
+    &lt;script&gt;
+      const div &#x3D; document.querySelector(&quot;body div&quot;);
+      div.addEventListener(&quot;click&quot;, () &#x3D;&gt; {
+        div.style.backgroundColor &#x3D; &quot;#80ff80&quot;;
+      });
+      div.addEventListener(&quot;mouseout&quot;, () &#x3D;&gt; {
+        div.style.backgroundColor &#x3D; &quot;#ffff00&quot;;
+      });
+    &lt;&#x2F;script&gt;
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+    </script>
+    <div>집 가고 싶다</div>
+    <script>
+      const div = document.querySelector("body div");
+      div.addEventListener("click", () => {
+        div.style.backgroundColor = "#80ff80";
+      });
+      div.addEventListener("mouseout", () => {
+        div.style.backgroundColor = "#ffff00";
+      });
+    </script>
+  </body>
+</html>
