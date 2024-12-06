@@ -72,7 +72,7 @@
 
       while (!answer.word) {
         const word_p &#x3D; prompt(&quot;제시어를 입력하세요.&quot;);
-        if (!word_p || !&#x2F;^[가-힣+]$&#x2F;g.test(word_p) || word_p.length &lt; 2)
+        if (!word_p || !&#x2F;^[가-힣]+$&#x2F;g.test(word_p) || word_p.length &lt; 2)
           continue;
         word.textContent &#x3D; word_p;
         answer.word &#x3D; confirm(&#x60;&#39;${word_p}&#39;이(가) 맞습니까?&#x60;);

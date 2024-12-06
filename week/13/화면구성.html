@@ -22,10 +22,7 @@
       &lt;hr &#x2F;&gt;
       &lt;div&gt;제시어 : &lt;span id&#x3D;&quot;word&quot;&gt;???&lt;&#x2F;span&gt;&lt;&#x2F;div&gt;
       &lt;hr &#x2F;&gt;
-      &lt;input
-        placeholder&#x3D;&quot;제시어를 이을 단어를 입력해주세요&quot;
-        onkeypress&#x3D;&quot;(e) &#x3D;&gt; console.log(e)&quot;
-      &#x2F;&gt;
+      &lt;input placeholder&#x3D;&quot;제시어를 이을 단어를 입력해주세요&quot; &#x2F;&gt;
       &lt;button&gt;입력&lt;&#x2F;button&gt;
     &lt;&#x2F;div&gt;
     &lt;style&gt;
@@ -71,7 +68,7 @@
 
       while (!answer.word) {
         const word_p &#x3D; prompt(&quot;제시어를 입력하세요.&quot;);
-        if (!word_p || !&#x2F;^[가-힣+]$&#x2F;g.test(word_p) || word_p.length &lt; 2)
+        if (!word_p || !&#x2F;^[가-힣]+$&#x2F;g.test(word_p) || word_p.length &lt; 2)
           continue;
         word.textContent &#x3D; word_p;
         answer.word &#x3D; confirm(&#x60;&#39;${word_p}&#39;이(가) 맞습니까?&#x60;);

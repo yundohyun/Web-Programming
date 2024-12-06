@@ -30,7 +30,8 @@
     &lt;script&gt;
       let answer;
       while (!answer) {
-        const num &#x3D; +prompt(&quot;끝말잇기를 할 인원을 입력하세요.&quot;) || 3;
+        const num &#x3D; +prompt(&quot;끝말잇기를 할 인원을 입력하세요.&quot;);
+        if (isNaN(num) || !num) continue;
         document.querySelector(&quot;#num&quot;).textContent &#x3D; num;
         answer &#x3D; confirm(&#x60;${num}명이 맞습니까?&#x60;);
       }
