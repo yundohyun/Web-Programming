@@ -28,6 +28,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       function createMonster(name, hp, att) {
         return { name, hp, att };
       }

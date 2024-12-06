@@ -14,6 +14,8 @@
   <body>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
     </script>
     <div>
       <h1>For문 합계</h1>

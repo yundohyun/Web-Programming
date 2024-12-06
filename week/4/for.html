@@ -21,6 +21,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       for (let num = 1; num <= 10; num++) document.write(`${num}번째 출력<br>`);
     </script>
   </body>

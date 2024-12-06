@@ -36,6 +36,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       const score = +prompt("점수를 입력하세요");
       const grade =
         score < 0 || score > 100

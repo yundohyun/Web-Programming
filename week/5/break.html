@@ -42,6 +42,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       let price;
       const drink = prompt("원하는 음료를 입력하세요");
       switch (drink) {

@@ -32,6 +32,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       const debug = {
         a: "윤도현",
         log: (...v) => document.write(`전달 받은 값 : ${v.join(", ")}<br />`),

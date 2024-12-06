@@ -21,6 +21,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       const num = +prompt("차량 번호 입력");
       document.write(`차량 번호 : ${num}`);
       document.write(`<br> 입고 ${num % 10 == 3 ? "불가능" : "가능"}`);

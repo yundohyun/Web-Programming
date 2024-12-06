@@ -25,6 +25,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       const arr = [13, 4, 45132, 65, 34, 24, 563568, 421, 56, 345, 64321, 7];
       document.write(`arr 배열의 값 : ${JSON.stringify(arr)}<br><br>`);
       for (const num of [1, 2, 4, 6, 8])

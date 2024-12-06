@@ -36,6 +36,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       const arr = [
         { name: "김말동", age: 21, address: "인천" },
         { name: "이말동", age: 22, address: "서울" },

@@ -29,6 +29,8 @@
     <script>
       // https://www.w3docs.com/tools/html-encoder/
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
     </script>
     <h3 onclick="change();">Click Me</h3>
     <h4>Don't Click Me</h4>

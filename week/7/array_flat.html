@@ -24,6 +24,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       const arr = [[1, 2, 3], [4, 5], [7, 8, 9], 8, 9];
       document.write("arr : " + JSON.stringify(arr.flat()) + "<br>".repeat(2));
       document.write(

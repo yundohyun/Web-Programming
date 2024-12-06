@@ -36,6 +36,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       let month = +prompt("월 입력");
       let season = null;
       // 이렇게 쓰지 마세요

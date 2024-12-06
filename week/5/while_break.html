@@ -24,6 +24,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       let text;
       while (text != "q") {
         text = prompt("텍스트 입력");

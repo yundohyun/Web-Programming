@@ -22,6 +22,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       const arr = [];
       arr.b = "water";
       document.write(`arr.b = ${arr.b}<br>`);

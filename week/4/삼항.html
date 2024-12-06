@@ -43,6 +43,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       // const month = +prompt("월을 입력하세요");
       // const season =
       //   month == 0 || month > 12

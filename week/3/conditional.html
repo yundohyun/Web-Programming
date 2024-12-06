@@ -44,6 +44,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       const pay = +prompt("연봉 입력") ?? 0;
       const distance = +prompt("출퇴근 거리 입력") ?? 0;
       // let result = "";

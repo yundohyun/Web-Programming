@@ -23,6 +23,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       for (let i = 1; i <= 30; i++) {
         document.write(`${i % 3 == 0 ? "짝" : i}&nbsp;`);
         if (i % 10 == 0) document.write("<br />");

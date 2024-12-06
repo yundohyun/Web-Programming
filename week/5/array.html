@@ -17,6 +17,8 @@
       <code class="language-html">
     &lt;script&gt;
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       let arr &#x3D; [3, &quot;n&quot;, 7, 4];
       for (let i &#x3D; 0; i &lt; arr.length; i++)
         document.write(&#x60;arr[${i}] &#x3D; ${arr[i]}&lt;br&gt;&#x60;);
@@ -31,6 +33,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
     </script>
     <script>
       let arr = [3, "n", 7, 4];

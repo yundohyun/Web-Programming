@@ -31,11 +31,20 @@
     <script>
       // https://www.w3docs.com/tools/html-encoder/
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
     </script>
     <style>
-      h3 { color: green; }
-      .ch3 { color: blue; border: 1px solid black; }
-      #sh3 { color: red; }
+      h3 {
+        color: green;
+      }
+      .ch3 {
+        color: blue;
+        border: 1px solid black;
+      }
+      #sh3 {
+        color: red;
+      }
     </style>
     <h3>JavaScript 1</h3>
     <h3 class="ch3">JavaScript 2</h3>

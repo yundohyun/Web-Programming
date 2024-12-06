@@ -28,6 +28,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       const 구구단 = (num) => {
         document.write(`<h2>${num}단</h2>`);
         for (let i = 1; i <= 9; i++)

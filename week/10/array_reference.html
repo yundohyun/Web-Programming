@@ -32,6 +32,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       const array = [{ j: "k", l: "m" }];
       const refer = array;
       array[0].j = "s";

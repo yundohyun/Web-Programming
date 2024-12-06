@@ -35,6 +35,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       const a = { name: "강아지" };
       const soft = a;
       const deep = JSON.parse(JSON.stringify(a));

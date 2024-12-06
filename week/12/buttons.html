@@ -34,6 +34,8 @@
     <script>
       // https://www.w3docs.com/tools/html-encoder/
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
     </script>
     <div>
       <h3>Q1. 누가 제일 이쁘니?</h3>

@@ -25,6 +25,8 @@
     <script>
       // https://www.w3docs.com/tools/html-encoder/
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       const num = [234, 534, 2521, 6, 4512, 54, 4236, 5234, 5, 12, 5134, 64325];
       const even = num.find((v) => v % 2 == 0);
       const odd = num.find((v) => v % 2 != 0);

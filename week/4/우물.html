@@ -31,6 +31,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       let count = 0;
       let distance = 0;
       while (distance <= 100) {

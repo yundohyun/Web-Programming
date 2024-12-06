@@ -26,6 +26,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       let input = prompt("문자를 입력해주세요");
       document.write(`input : ${input}`);
       document.write(`<br>input type : ${typeof input}`);

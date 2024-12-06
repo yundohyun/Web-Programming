@@ -34,6 +34,8 @@
     </pre>
     <script>
       hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
       const array = [{ j: "k", l: "m" }];
       const refer1 = array; // 참조 관계
       const refer2 = [...array]; // 얕은 복사
