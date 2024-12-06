@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>완성</h1>
+    <pre>
+      <code class="language-html">
+    &lt;div&gt;
+      &lt;span id&#x3D;&quot;num&quot;&gt;&lt;&#x2F;span&gt;명이 끝말잇기를 시작합니다.
+      &lt;hr &#x2F;&gt;
+      &lt;span id&#x3D;&quot;order&quot;&gt;1&lt;&#x2F;span&gt;번째 참가자
+      &lt;hr &#x2F;&gt;
+      &lt;div&gt;제시어 : &lt;span id&#x3D;&quot;word&quot;&gt;???&lt;&#x2F;span&gt;&lt;&#x2F;div&gt;
+      &lt;hr &#x2F;&gt;
+      &lt;input
+        type&#x3D;&quot;text&quot;
+        placeholder&#x3D;&quot;제시어를 이을 단어를 입력해주세요&quot;
+        onkeyup&#x3D;&quot;window.event.keyCode &#x3D;&#x3D; 13 &amp;&amp; checkWord()&quot;
+      &#x2F;&gt;
+      &lt;button&gt;입력&lt;&#x2F;button&gt;
+      &lt;hr &#x2F;&gt;
+      &lt;div id&#x3D;&quot;log&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+    &lt;style&gt;
+      body &gt; div span {
+        color: red;
+        font-size: 24px;
+        border: 2px blue dotted;
+        padding-inline: 3px;
+      }
+      input {
+        width: 240px;
+      }
+    &lt;&#x2F;style&gt;
+    &lt;script&gt;
+      const num &#x3D; document.querySelector(&quot;#num&quot;);
+      const order &#x3D; document.querySelector(&quot;#order&quot;);
+      const word &#x3D; document.querySelector(&quot;#word&quot;);
+      const input &#x3D; document.querySelector(&quot;input&quot;);
+      const button &#x3D; document.querySelector(&quot;button&quot;);
+      const log &#x3D; document.querySelector(&quot;#log&quot;);
+
+      let count &#x3D; 1;
+      const answer &#x3D; { num: false, word: false };
+      const query &#x3D; new URL(location.href).searchParams;
+
+      if (query.get(&quot;hidden&quot;) &#x3D;&#x3D; &quot;true&quot;)
+        document.querySelector(&quot;body &gt; pre&quot;).style.display &#x3D; &quot;none&quot;;
+
+      if (query.has(&quot;num&quot;)) {
+        num.textContent &#x3D; query.get(&quot;num&quot;);
+        answer.num &#x3D; true;
+      }
+
+      if (query.has(&quot;word&quot;)) {
+        word.textContent &#x3D; query.get(&quot;word&quot;);
+        answer.word &#x3D; true;
+      }
+
+      while (!answer.num) {
+        const num_p &#x3D; +prompt(&quot;끝말잇기를 할 인원을 입력하세요.&quot;);
+        if (isNaN(num_p) || !num_p) continue;
+        num.textContent &#x3D; num_p;
+        answer.num &#x3D; confirm(&#x60;${num_p}명이 맞습니까?&#x60;);
+      }
+
+      while (!answer.word) {
+        const word_p &#x3D; prompt(&quot;제시어를 입력하세요.&quot;);
+        if (!word_p || !&#x2F;^[가-힣]+$&#x2F;.test(word_p) || word_p.length &lt; 2)
+          continue;
+        word.textContent &#x3D; word_p;
+        answer.word &#x3D; confirm(&#x60;&#39;${word_p}&#39;이(가) 맞습니까?&#x60;);
+      }
+
+      const addLog &#x3D; (n) &#x3D;&gt; {
+        log.appendChild(
+          document.createElement(&quot;p&quot;)
+        ).textContent &#x3D; &#x60;${count++}번째 단어 (${n}번째 참가자) : ${
+          word.textContent
+        }&#x60;;
+      };
+
+      const checkWord &#x3D; () &#x3D;&gt; {
+        if (!input.value || input.value.length &lt; 2)
+          return alert(&quot;단어를 입력해주세요.&quot;);
+        if (!&#x2F;^[가-힣]+$&#x2F;.test(input.value.trim()))
+          return alert(&quot;한글만 입력해주세요.&quot;);
+        if (input.value[0] !&#x3D; word.textContent[word.textContent.length - 1])
+          return alert(&quot;글자가 이어지지 않습니다.&quot;);
+        addLog(order.textContent);
+        order.textContent &#x3D;
+          +order.textContent &#x3D;&#x3D; +num.textContent ? 1 : +order.textContent + 1;
+        word.textContent &#x3D; input.value;
+        input.value &#x3D; &quot;&quot;;
+      };
+
+      button.addEventListener(&quot;click&quot;, checkWord);
+    &lt;&#x2F;script&gt;
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
+    </script>
+    <div>
+      <span id="num"></span>명이 끝말잇기를 시작합니다.
+      <hr />
+      <span id="order">1</span>번째 참가자
+      <hr />
+      <div>제시어 : <span id="word">???</span></div>
+      <hr />
+      <input
+        type="text"
+        placeholder="제시어를 이을 단어를 입력해주세요"
+        onkeyup="window.event.keyCode == 13 && checkWord()"
+      />
+      <button>입력</button>
+      <hr />
+      <div id="log"></div>
+    </div>
+    <style>
+      body > div span {
+        color: red;
+        font-size: 24px;
+        border: 2px blue dotted;
+        padding-inline: 3px;
+      }
+      input {
+        width: 240px;
+      }
+    </style>
+    <script>
+      const num = document.querySelector("#num");
+      const order = document.querySelector("#order");
+      const word = document.querySelector("#word");
+      const input = document.querySelector("input");
+      const button = document.querySelector("button");
+      const log = document.querySelector("#log");
+
+      let count = 1;
+      const answer = { num: false, word: false };
+      const query = new URL(location.href).searchParams;
+
+      if (query.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
+
+      if (query.has("num")) {
+        num.textContent = query.get("num");
+        answer.num = true;
+      }
+
+      if (query.has("word")) {
+        word.textContent = query.get("word");
+        answer.word = true;
+      }
+
+      while (!answer.num) {
+        const num_p = +prompt("끝말잇기를 할 인원을 입력하세요.");
+        if (isNaN(num_p) || !num_p) continue;
+        num.textContent = num_p;
+        answer.num = confirm(`${num_p}명이 맞습니까?`);
+      }
+
+      while (!answer.word) {
+        const word_p = prompt("제시어를 입력하세요.");
+        if (!word_p || !/^[가-힣]+$/.test(word_p) || word_p.length < 2)
+          continue;
+        word.textContent = word_p;
+        answer.word = confirm(`'${word_p}'이(가) 맞습니까?`);
+      }
+
+      const addLog = (n) => {
+        log.appendChild(
+          document.createElement("p")
+        ).textContent = `${count++}번째 단어 (${n}번째 참가자) : ${
+          word.textContent
+        }`;
+      };
+
+      const checkWord = () => {
+        if (!input.value || input.value.length < 2)
+          return alert("단어를 입력해주세요.");
+        if (!/^[가-힣]+$/.test(input.value.trim()))
+          return alert("한글만 입력해주세요.");
+        if (input.value[0] != word.textContent[word.textContent.length - 1])
+          return alert("글자가 이어지지 않습니다.");
+        addLog(order.textContent);
+        order.textContent =
+          +order.textContent == +num.textContent ? 1 : +order.textContent + 1;
+        word.textContent = input.value;
+        input.value = "";
+      };
+
+      button.addEventListener("click", checkWord);
+    </script>
+  </body>
+</html>
