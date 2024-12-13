@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>11주차</h1>
+    <pre>
+      <code class="language-javascript">
+    &#x2F;&#x2F; 다음 소스를 보고 물음에 답하시오
+    const nums &#x3D; [];
+    for (let i &#x3D; 0; i &lt; 10; i++) nums.push(i);
+  
+    &#x2F;&#x2F; 1. 다음 nums의 각 요소에 map 함수를 이용하여 5씩 더하도록 프로그래밍 하시오.
+    nums.map((num) &#x3D;&gt; num + 5);
+  
+    &#x2F;&#x2F; 2. nums에서 홀수인 값만 돌려받는 배열 메소드를 이용하여 프로그래밍하시오. 단 한 개값만 돌려받도록 한다.
+    nums.find((num) &#x3D;&gt; num % 2 &#x3D;&#x3D; 1);
+  
+    &#x2F;&#x2F; 3. nums에서 홀수인 값만 돌려받는 배열 메소드를 이용하여 프로그래밍하시오. 모든 값을 돌려받도록 한다.
+    nums.filter((num) &#x3D;&gt; num % 2 &#x3D;&#x3D; 1);
+  
+    &#x2F;&#x2F; 4. 다음 arr 배열 값 중 3000과 같은 과일명을 보이시오.
+    const arr &#x3D; [
+      { name: &quot;apple&quot;, price: 1000 },
+      { name: &quot;orange&quot;, price: 3000 },
+      { name: &quot;banana&quot;, price: 400 },
+    ];
+    document.write(arr.find((fruit) &#x3D;&gt; fruit.price &#x3D;&#x3D; 3000).name + &quot;&lt;br&gt;&quot;);
+  
+    &#x2F;&#x2F; 5. 다음 배열 nums 값을 배열메소드를 이용하여 역순으로 출력하시오.
+    const nums_ &#x3D; [1, 6, 7, 4, 5, 11, 9, 8];
+    document.write(nums_.reverse() + &quot;&lt;br&gt;&quot;);
+  
+    &#x2F;&#x2F; 6. nums 의 값을 다 더하기 위해 reduce메소드를 이용하여 프로그래밍하시오.
+    document.write(nums.reduce((acc, cur) &#x3D;&gt; acc + cur) + &quot;&lt;br&gt;&quot;);
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
+    </script>
+    <script>
+      // 다음 소스를 보고 물음에 답하시오
+      const nums = [];
+      for (let i = 0; i < 10; i++) nums.push(i);
+
+      // 1. 다음 nums의 각 요소에 map 함수를 이용하여 5씩 더하도록 프로그래밍 하시오.
+      nums.map((num) => num + 5);
+
+      // 2. nums에서 홀수인 값만 돌려받는 배열 메소드를 이용하여 프로그래밍하시오. 단 한 개값만 돌려받도록 한다.
+      nums.find((num) => num % 2 == 1);
+
+      // 3. nums에서 홀수인 값만 돌려받는 배열 메소드를 이용하여 프로그래밍하시오. 모든 값을 돌려받도록 한다.
+      nums.filter((num) => num % 2 == 1);
+
+      // 4. 다음 arr 배열 값 중 3000과 같은 과일명을 보이시오.
+      const arr = [
+        { name: "apple", price: 1000 },
+        { name: "orange", price: 3000 },
+        { name: "banana", price: 400 },
+      ];
+      document.write(arr.find((fruit) => fruit.price == 3000).name + "<br>");
+
+      // 5. 다음 배열 nums 값을 배열메소드를 이용하여 역순으로 출력하시오.
+      const nums_ = [1, 6, 7, 4, 5, 11, 9, 8];
+      document.write(nums_.reverse() + "<br>");
+
+      // 6. nums 의 값을 다 더하기 위해 reduce메소드를 이용하여 프로그래밍하시오.
+      document.write(nums.reduce((acc, cur) => acc + cur) + "<br>");
+    </script>
+  </body>
+</html>
