@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>12주차</h1>
+    <pre>
+      <code class="language-html">
+    &lt;div&gt;
+      &lt;!-- 다음 코드를 보고 답하시오 --&gt;
+      &lt;h2&gt;header&lt;&#x2F;h2&gt;
+      &lt;p id&#x3D;&quot;p&quot; onclick&#x3D;&quot;over()&quot;&gt;나를 눌러봐요&lt;&#x2F;p&gt;
+      &lt;div&gt;
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+        neque optio harum earum veniam dolorum illum iusto fuga alias, numquam
+        sunt cum corporis mpedit dolores sapiente vel omnis est. Explicabo!
+      &lt;&#x2F;div&gt;
+      &lt;button onclick&#x3D;&quot;change(this,&#39;skyblue&#39;,&#39;30px&#39;,&#39;왕자다&#39;)&quot;&gt;나는요!!&lt;&#x2F;button&gt;
+      &lt;div id&#x3D;&quot;div&quot; onmouseout&#x3D;&quot;out()&quot;&gt;I love winter.&lt;&#x2F;div&gt;
+      &lt;p&gt;Q1. 거울아 세상에서 누가누가 이쁘니?&lt;&#x2F;p&gt;
+      &lt;button onclick&#x3D;&quot;answer(this,&#39;백설공주&#39;)&quot;&gt;답보기&lt;&#x2F;button&gt;
+    &lt;&#x2F;div&gt;
+    &lt;script&gt;
+      &#x2F;&#x2F; 1. 다음 id로 p 태그를 script태그로 불러오도록 프로그래밍하시오.
+      const p &#x3D; document.getElementById(&quot;p&quot;);
+
+      &#x2F;&#x2F; 2. over함수는 클릭시 p태그의  배경색을 red로 표현하도록 프로그래밍하시오.
+      function over() {
+        p.style.backgroundColor &#x3D; &quot;red&quot;;
+      }
+
+      &#x2F;&#x2F; 3. 2번의 over()함수를 에로우함수로 변경하시오.
+      over &#x3D; () &#x3D;&gt; {
+        p.style.backgroundColor &#x3D; &quot;red&quot;;
+      };
+
+      &#x2F;&#x2F; 4. h2 태그을 자바스트립트로 불러와 header문자열 대신 javascript로 변경하시오.
+      document.querySelector(&quot;h2&quot;).textContent &#x3D; &quot;javascript&quot;;
+
+      &#x2F;&#x2F; 5. 4번의 연장으로 h2태그에 대해 글자색을 red로 변경하시오.
+      document.querySelector(&quot;h2&quot;).style.color &#x3D; &quot;red&quot;;
+
+      &#x2F;&#x2F; 6. 다음 change함수를 작성하시오.
+      &#x2F;*
+        &lt;button onclick&#x3D;&quot;change(this,&#39;skyblue&#39;,&#39;30px&#39;,&#39;왕자다&#39;)&quot;&gt;나는요!!&lt;&#x2F;button&gt;
+      *&#x2F;
+      function change(btn, color, size, text) {
+        btn.style.backgroundColor &#x3D; color;
+        btn.style.fontSize &#x3D; size;
+        btn.textContent &#x3D; text;
+      }
+
+      &#x2F;&#x2F; 7. 다음 out함수는 마우스가 밖으로 빠져나갈 경우
+      &#x2F;&#x2F; 현디렉토리에 있는 cat.png 이미지가 보이도록 한다.
+      &#x2F;&#x2F; 이에 맞게 프로그래밍하시오.
+      &#x2F;*
+        &lt;div id&#x3D;&quot;div&quot; onmouseout&#x3D;&quot;out()&quot;&gt;I love winter.&lt;&#x2F;div&gt;
+      *&#x2F;
+      function out() {
+        document.getElementById(&quot;div&quot;).innerHTML &#x3D;
+          &#39;&lt;img src&#x3D;&quot;cat.png&quot; alt&#x3D;&quot;cat&quot; &#x2F;&gt;&#39;;
+      }
+
+      &#x2F;&#x2F; 8. 다음은 button 클릭시 질문이 답이 나오도록 answer 함수를 프로그래밍하시오.
+      &#x2F;*
+        &lt;button onclick&#x3D;&quot;answer(this,&#39;백설공주&#39;)&quot;&gt;답보기&lt;&#x2F;button&gt;
+      *&#x2F;
+      function answer(btn, answer) {
+        btn.textContent &#x3D; answer;
+      }
+
+      &#x2F;&#x2F; 9. 8번의 onclick함수를 addEventListener를 이용하여 프로그래밍하시오.
+      document.querySelector(&quot;button&quot;).addEventListener(&quot;click&quot;, () &#x3D;&gt; {
+        answer(this, &quot;백설공주&quot;);
+      });
+    &lt;&#x2F;script&gt;
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
+    </script>
+    <div>
+      <!-- 다음 코드를 보고 답하시오 -->
+      <h2>header</h2>
+      <p id="p" onclick="over()">나를 눌러봐요</p>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+        neque optio harum earum veniam dolorum illum iusto fuga alias, numquam
+        sunt cum corporis mpedit dolores sapiente vel omnis est. Explicabo!
+      </div>
+      <button onclick="change(this,'skyblue','30px','왕자다')">나는요!!</button>
+      <div id="div" onmouseout="out()">I love winter.</div>
+      <p>Q1. 거울아 세상에서 누가누가 이쁘니?</p>
+      <button onclick="answer(this,'백설공주')">답보기</button>
+    </div>
+    <script>
+      // 1. 다음 id로 p 태그를 script태그로 불러오도록 프로그래밍하시오.
+      const p = document.getElementById("p");
+
+      // 2. over함수는 클릭시 p태그의  배경색을 red로 표현하도록 프로그래밍하시오.
+      function over() {
+        p.style.backgroundColor = "red";
+      }
+
+      // 3. 2번의 over()함수를 에로우함수로 변경하시오.
+      over = () => {
+        p.style.backgroundColor = "red";
+      };
+
+      // 4. h2 태그을 자바스트립트로 불러와 header문자열 대신 javascript로 변경하시오.
+      document.querySelector("h2").textContent = "javascript";
+
+      // 5. 4번의 연장으로 h2태그에 대해 글+자색을 red로 변경하시오.
+      document.querySelector("h2").style.color = "red";
+
+      // 6. 다음 change함수를 작성하시오.
+      /*
+        <button onclick="change(this,'skyblue','30px','왕자다')">나는요!!</button>
+      */
+      function change(btn, color, size, text) {
+        btn.style.backgroundColor = color;
+        btn.style.fontSize = size;
+        btn.textContent = text;
+      }
+
+      // 7. 다음 out함수는 마우스가 밖으로 빠져나갈 경우
+      // 현디렉토리에 있는 cat.png 이미지가 보이도록 한다.
+      // 이에 맞게 프로그래밍하시오.
+      /*
+        <div id="div" onmouseout="out()">I love winter.</div>
+      */
+      function out() {
+        document.getElementById("div").innerHTML =
+          '<img src="cat.png" alt="cat" />';
+      }
+
+      // 8. 다음은 button 클릭시 질문이 답이 나오도록 answer 함수를 프로그래밍하시오.
+      /*
+        <button onclick="answer(this,'백설공주')">답보기</button>
+      */
+      function answer(btn, answer) {
+        btn.textContent = answer;
+      }
+
+      // 9. 8번의 onclick함수를 addEventListener를 이용하여 프로그래밍하시오.
+      document.querySelector("button").addEventListener("click", () => {
+        answer(this, "백설공주");
+      });
+    </script>
+  </body>
+</html>
