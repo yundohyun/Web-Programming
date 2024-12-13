@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+    />
+    <link rel="stylesheet" href="/style/code.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>9주차</h1>
+    <pre>
+      <code class="language-javascript">
+    &#x2F;&#x2F; 1. 다음 변수들을 객체(data)로 저장하시오.
+    &#x2F;*
+      let subject &#x3D; &#39;javaScript&#39;;
+      let year &#x3D; 2024;
+      let day &#x3D; &#39;wendsday&#39;;
+    *&#x2F;
+    const data &#x3D; {
+      subject: &quot;javaScript&quot;,
+      year: 2024,
+      day: &quot;wendsday&quot;,
+    };
+
+    &#x2F;&#x2F; 2. 1번에서 만든 객체의 subject값을 java로 변경하시오.
+    data.subject &#x3D; &quot;java&quot;;
+
+    &#x2F;&#x2F; 3. 1번의 data객체에 year-term변수에 2값을 갖도록 추가하시오.
+    data[&quot;year-term&quot;] &#x3D; 2;
+  
+    &#x2F;&#x2F; 4. 1번의 data객체의 day변수를 삭제하시오.
+    delete data.day;
+  
+    &#x2F;&#x2F; 5. 객체에 add메소드가 다음과 같을 때 obj객체를 생성하시오.
+    &#x2F;*
+      let data &#x3D; obj.add(3,4);
+    *&#x2F;
+    const obj &#x3D; { add: (a, b) &#x3D;&gt; a + b };
+
+    &#x2F;&#x2F; 6. 다음과 같은 data객체에서 data.unknown.worst를 출력시 오류가 발생하지 않도록 하려면?
+    &#x2F;*
+      let data &#x3D;{
+        name:&#39;차은우&#39;,
+        gender:&#39;man&#39;,
+        girlfriend:{
+            best:&#39;honey&#39;,
+            worst:&#39;leesunhee&#39;,
+        },
+      };
+    *&#x2F;
+    document.write(&#x60;data.unknown.worst &#x3D; ${data.girlfriend?.worst}&lt;br&gt;&#x60;);
+
+    &#x2F;&#x2F; 7. 다음 출력결과를 100으로 출력하려면?
+    const a &#x3D; { value: null };
+    const result &#x3D; a.value ?? 100;
+    document.write(result + &quot;&lt;br&gt;&quot;);
+
+    &#x2F;&#x2F; 8. 다음 출력의 결과를 쓰시오.
+    const a_ &#x3D; { name: &quot;이순신&quot; };
+    const b &#x3D; a_;
+    document.write(a_.name + &quot; ,&quot; + b.name);
+    b.name &#x3D; &quot;강감찬&quot;;
+    document.write(a_.name + &quot; ,&quot; + b.name + &quot;&lt;br&gt;&quot;);
+    &#x2F;&#x2F; 이순신 ,이순신강감찬 ,강감찬
+      </code>
+    </pre>
+    <script>
+      // https://www.w3docs.com/tools/html-encoder/
+      hljs.highlightAll();
+      if (new URL(location.href).searchParams.get("hidden") == "true")
+        document.querySelector("body > pre").style.display = "none";
+    </script>
+    <script>
+      // 1. 다음 변수들을 객체(data)로 저장하시오.
+      /*
+        let subject = 'javaScript';
+        let year = 2024;
+        let day = 'wendsday';
+      */
+      const data = {
+        subject: "javaScript",
+        year: 2024,
+        day: "wendsday",
+      };
+
+      // 2. 1번에서 만든 객체의 subject값을 java로 변경하시오.
+      data.subject = "java";
+
+      // 3. 1번의 data객체에 year-term변수에 2값을 갖도록 추가하시오.
+      data["year-term"] = 2;
+
+      // 4. 1번의 data객체의 day변수를 삭제하시오.
+      delete data.day;
+
+      // 5. 객체에 add메소드가 다음과 같을 때 obj객체를 생성하시오.
+      /*
+        let data = obj.add(3,4);
+      */
+      const obj = { add: (a, b) => a + b };
+
+      // 6. 다음과 같은 data객체에서 data.unknown.worst를 출력시 오류가 발생하지 않도록 하려면?
+      /*
+        let data ={
+          name:'차은우',
+          gender:'man',
+          girlfriend:{
+              best:'honey',
+              worst:'leesunhee',
+          },
+        };
+      */
+      document.write(`data.unknown.worst = ${data.girlfriend?.worst}<br>`);
+
+      // 7. 다음 출력결과를 100으로 출력하려면?
+      const a = { value: null };
+      const result = a.value ?? 100;
+      document.write(result + "<br>");
+
+      // 8. 다음 출력의 결과를 쓰시오.
+      const a_ = { name: "이순신" };
+      const b = a_;
+      document.write(a_.name + " ," + b.name);
+      b.name = "강감찬";
+      document.write(a_.name + " ," + b.name + "<br>");
+      // 이순신 ,이순신강감찬 ,강감찬
+    </script>
+  </body>
+</html>
